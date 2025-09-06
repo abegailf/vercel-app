@@ -101,6 +101,38 @@ export default function Portfolio() {
   }
 
     const recentWorkProjects = [
+       {
+      id: 13, // <-- New ID
+      title: "AI QA Agent for New Content",
+      description: "AI Agent Design, Quality Assurance Automation",
+      image: "/images/Pt creator AI.png", // Using a relevant placeholder
+      categories: ["ga4"], // Placeholder category
+      link: "/projects/ai-qa-agent-requests", // <-- New link
+    },
+        {
+      id: 12, // <-- New ID
+      title: "AI QA Agent for Content Alignment",
+      description: "AI Agent Design, Quality Assurance, Prompt Engineering",
+      image: "/images/qa ws-pt alignment.png", // Using a relevant placeholder
+      categories: ["ga4"], // Placeholder category
+      link: "/projects/ai-qa-agent", // <-- New link
+    },
+       {
+      id: 10, // <-- New ID
+      title: "AI Agent for Content Alignment",
+      description: "Prompt Engineering, AI Agent Design, Automation",
+      image: "/images/ws-pt alignment creation.png", // Using a relevant placeholder
+      categories: ["ga4"], // Placeholder category, can create an 'ai' one later
+      link: "/projects/ai-orchestrator-alignment", // <-- New link
+    },
+      {
+      id: 11, // <-- New ID
+      title: "AI Agent for Content Creation",
+      description: "Prompt Engineering, System Architecture, Code Generation",
+      image: "/images/pt request creation.png", // Using a relevant placeholder
+      categories: ["ga4"], // Placeholder category
+      link: "/projects/ai-orchestrator-creation", // <-- New link
+    },
       {
       id: 9, // <-- New ID
       title: "Problem Template Creator AI",
