@@ -506,7 +506,7 @@ export default function Portfolio() {
         <section id="projects" className="py-16 max-w-4xl mx-auto px-6">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold mb-2">Recent Work</h2>
-             <Link href="/personal-project" className="border-orange-600 text-orange-600 hover:text-white bg-transparent">
+             <Link href="/work-project" className="border-orange-600 text-orange-600 hover:text-white bg-transparent">
               View all my work projects
             </Link>
           </div>
