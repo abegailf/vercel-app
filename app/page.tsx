@@ -101,6 +101,30 @@ export default function Portfolio() {
   }
 
     const recentWorkProjects = [
+      {
+      id: 9, // <-- New ID
+      title: "Problem Template Creator AI",
+      description: "Google AI Studio, Prompt Engineering, Automation",
+      image: "/images/Pt creator AI.png", // <-- New image
+      categories: ["ga4"], // Using a placeholder category for now, you can create a new one like 'ai' later
+      link: "/projects/pt-creator-ai", // <-- New link
+    },
+       {
+      id: 8, // <-- New ID
+      title: "Store Pullout Automation (VBA)",
+      description: "Excel, VBA, Process Automation",
+      image: "/images/inventory-replenishment.png", // Using placeholder image for now
+      categories: ["excel"],
+      link: "/projects/store-pullout-automation", // <-- New link
+    },
+      {
+      id: 7, // <-- New ID
+      title: "Inventory Replenishment Template",
+      description: "Excel, Process Automation",
+      image: "/images/inventory-replenishment.png", // <-- New image
+      categories: ["excel"],
+      link: "/projects/inventory-replenishment", // <-- New link
+    },
     {
       id: 3,
       title: "Inventory Forecasting Model",

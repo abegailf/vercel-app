@@ -278,14 +278,14 @@ export default function ExcelSalesDashboard() {
 
                 {/* Back to Projects */}
                 <div className="pt-8 border-t" style={{ borderColor: "#A59385" }}>
-                  <Link href="/">
+                  <Link href="/work-project">
                     <Button
                       variant="outline"
                       className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent"
                       style={{ borderColor: "#FB5530", color: "#FB5530" }}
                     >
                       <ArrowLeft className="w-4 h-4 mr-2" />
-                      Back to Projects
+                      Back to work projects
                     </Button>
                   </Link>
                 </div>
@@ -332,10 +332,6 @@ export default function ExcelSalesDashboard() {
           </div>
         </section>
 
-        {/* <footer className="py-8 text-center border-t" style={{ color: "#A59385", borderColor: "#A59385" }}>
-          <p className="mb-4">© Copyright 2024. All rights reserved.</p>
-          <p className="text-sm">Made with ❤️ using React + Tailwind</p>
-        </footer> */}
         
       </div>
     </div>

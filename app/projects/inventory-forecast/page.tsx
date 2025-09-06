@@ -146,13 +146,13 @@ export default function InventoryForecastModel() {
 
               {/* Back to Portfolio */}
               <div className="pt-8 border-t border-gray-700">
-                <Link href="/portfolio">
+                <Link href="/work-project">
                   <Button
                     variant="outline"
                     className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent"
                   >
                     <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to Portfolio
+                    Back to work projects
                   </Button>
                 </Link>
               </div>
