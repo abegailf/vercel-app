@@ -383,7 +383,7 @@ export default function Portfolio() {
         {/* ================================================================== */}
         {/* SECTION 1: HERO (STAYS AT TOP) */}
         {/* ================================================================== */}
-        <section id="home" className="text-center py-20 max-w-4xl mx-auto px-6">
+       <section id="home" className="flex flex-col items-center justify-center text-center min-h-screen py-20 max-w-4xl mx-auto px-6">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             Hi, I'm <span style={{ color: "#FB5530" }}>Abegail</span>
           </h1>
