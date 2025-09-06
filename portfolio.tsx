@@ -385,9 +385,9 @@ export default function Portfolio() {
         {/* ================================================================== */}
        <section
   id="home"
-  className="relative h-screen" // Sets a specific height of the screen and acts as a positioning anchor
+  className="relative h-screen -mt-20" // <-- THE FIX IS HERE: ADDED -mt-20
 >
-  {/* This inner div is now positioned absolutely within the section */}
+  {/* This inner div is positioned absolutely within the section */}
   <div
     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full px-6"
   >
@@ -400,14 +400,14 @@ export default function Portfolio() {
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button
-          onClick={() => scrollToSection("#about")} // This needs to come from the layout
+          onClick={() => scrollToSection("#about")}
           className="text-white border-2 hover:bg-gray-800"
           style={{ backgroundColor: "#FB5530", borderColor: "#FB5530" }}
         >
           About
         </Button>
         <Button
-          onClick={() => scrollToSection("#projects")} // This needs to come from the layout
+          onClick={() => scrollToSection("#projects")}
           variant="outline"
           className="border-2 hover:bg-gray-800"
           style={{ borderColor: "#A59385", color: "#A59385" }}
