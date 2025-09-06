@@ -102,6 +102,14 @@ export default function Portfolio() {
 
     const recentWorkProjects = [
        {
+      id: 14, // <-- Project ID
+      title: "AI-Powered Visualization Scripting", // <-- New Title
+      description: "Python, Matplotlib, AI Code Generation", // <-- New Description
+      image: "/images/histogram curve.png", // <-- YOUR NEW IMAGE
+      categories: ["excel"], // Placeholder category
+      link: "/projects/python-histogram-generator",
+    },
+       {
       id: 13, // <-- New ID
       title: "AI QA Agent for New Content",
       description: "AI Agent Design, Quality Assurance Automation",
