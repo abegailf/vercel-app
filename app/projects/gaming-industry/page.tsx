@@ -38,8 +38,7 @@ export default function GamingIndustryCaseStudy() {
 
   return (
     <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: "#111024", color: "white" }}>
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: "#111024" }}>
+      {/*  <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: "#111024" }}>
         <div className="flex items-center justify-between p-6 max-w-7xl mx-auto">
           <Link href="/" className="text-xl font-bold">
             AbegailF.
@@ -178,7 +177,8 @@ export default function GamingIndustryCaseStudy() {
             </nav>
           </div>
         )}
-      </header>
+      </header */}
+     
 
       <div className="pt-20">
         {/* Page Title */}
@@ -340,21 +340,11 @@ export default function GamingIndustryCaseStudy() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="py-8 text-center text-gray-400 border-t border-gray-800">
+        {/* <footer className="py-8 text-center border-t" style={{ color: "#A59385", borderColor: "#A59385" }}>
           <p className="mb-4">© Copyright 2024. All rights reserved.</p>
-          {/* Social Links - Commented out for now
-          <div className="flex gap-4 justify-center mb-4">
-            <Button size="icon" variant="ghost" className="text-blue-400 hover:text-blue-300">
-              <Linkedin className="w-5 h-5" />
-            </Button>
-            <Button size="icon" variant="ghost" className="text-gray-400 hover:text-gray-300">
-              <Github className="w-5 h-5" />
-            </Button>
-          </div>
-          */}
           <p className="text-sm">Made with ❤️ using React + Tailwind</p>
-        </footer>
+        </footer> */}
+       
       </div>
     </div>
   )

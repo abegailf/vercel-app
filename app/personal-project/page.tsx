@@ -80,8 +80,7 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: "#111024", color: "white" }}>
       {/* Header */}
-            {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 w-full" style={{ backgroundColor: "#111024" }}>
+            {/*  <header className="fixed top-0 left-0 right-0 z-50 w-full" style={{ backgroundColor: "#111024" }}>
         <div className="flex items-center justify-between p-6 max-w-7xl mx-auto relative">
           <Link href="/" className="text-xl font-bold">
             AbegailF.
@@ -163,7 +162,8 @@ export default function PortfolioPage() {
             </div>
           )}
         </div>
-      </header>
+      </header> */}
+     
 
       <div className="pt-20">
         {/* Page Title */}
@@ -235,11 +235,13 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        {/* Footer */}
+        {/* Footer
         <footer className="py-8 text-center border-t" style={{ color: "#A59385", borderColor: "#A59385" }}>
           <p className="mb-4">© Copyright 2024. All rights reserved.</p>
           <p className="text-sm">Made with ❤️ using React + Tailwind</p>
         </footer>
+        */}
+        
       </div>
     </div>
   )

@@ -7,14 +7,18 @@ import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-
-// You may need to adjust the path to your global CSS file
-import "./globals.css"
+import "./globals.css" // This imports your global styles
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const scrollToSection = (sectionId: string) => {
+    // If the 'home' button is clicked, just go to the root URL
+    if (sectionId === "home") {
+        window.location.href = "/";
+        return;
+    }
+
     // If we're already on the homepage, scroll smoothly
     if (window.location.pathname === "/") {
       const element = document.getElementById(sectionId)
@@ -22,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         element.scrollIntoView({ behavior: "smooth" })
       }
     } else {
-      // Otherwise, navigate to the homepage and then scroll
+      // If we are on a different page, navigate to the homepage with the section hash
       window.location.href = `/#${sectionId}`
     }
     setIsMenuOpen(false)
@@ -33,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: "#111024", color: "white" }}>
           {/* ================================================================== */}
-          {/* SHARED HEADER */}
+          {/* THIS IS YOUR NEW, SHARED HEADER */}
           {/* ================================================================== */}
           <header className="fixed top-0 left-0 right-0 z-50 w-full" style={{ backgroundColor: "#111024" }}>
             <div className="flex items-center justify-between p-6 max-w-7xl mx-auto relative">
@@ -71,18 +75,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </header>
 
-          {/* This is where the content of each page will be inserted */}
-          <main className="pt-20">
+          {/* All page content will be inserted here */}
+          <main>
             {children}
           </main>
 
+            {/* ================================================================== */}
+          {/* PASTE YOUR SHARED FOOTER HERE */}
           {/* ================================================================== */}
-          {/* SHARED FOOTER */}
-          {/* ================================================================== */}
-          <footer className="py-8 text-center text-gray-400 border-t border-gray-800">
-            <p className="mb-4">© Copyright 2024. All rights reserved.</p>
-            <p className="text-sm">Made with ❤️ using React + Tailwind</p>
-          </footer>
+          {/* Footer */}
+        <footer className="py-8 text-center border-t" style={{ color: "#A59385", borderColor: "#A59385" }}>
+          <p className="mb-4">© Copyright 2024. All rights reserved.</p>
+          <p className="text-sm">Made with ❤️ using React + Tailwind</p>
+        </footer>
+
         </div>
       </body>
     </html>
