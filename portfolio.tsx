@@ -383,31 +383,41 @@ export default function Portfolio() {
         {/* ================================================================== */}
         {/* SECTION 1: HERO (STAYS AT TOP) */}
         {/* ================================================================== */}
-       <section id="home" className="flex flex-col items-center justify-center text-center min-h-screen py-20 max-w-4xl mx-auto px-6">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            Hi, I'm <span style={{ color: "#FB5530" }}>Abegail</span>
-          </h1>
-          <p className="text-xl mb-8" style={{ color: "#A59385" }}>
-            Solving complex problems at the intersection of Mathematics, Data Analytics, and AI.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-               onClick={() => scrollToSection("#about")} 
-              className="text-white border-2 hover:bg-gray-800"
-              style={{ backgroundColor: "#FB5530", borderColor: "#FB5530" }}
-            >
-              About
-            </Button>
-            <Button
-               onClick={() => scrollToSection("#projects")}  
-              variant="outline"
-              className="border-2 hover:bg-gray-800"
-              style={{ borderColor: "#A59385", color: "#A59385" }}
-            >
-              Work
-            </Button>
-          </div>
-        </section>
+       <section
+  id="home"
+  className="relative h-screen" // Sets a specific height of the screen and acts as a positioning anchor
+>
+  {/* This inner div is now positioned absolutely within the section */}
+  <div
+    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full px-6"
+  >
+    <div className="max-w-4xl mx-auto">
+      <h1 className="text-5xl md:text-6xl font-bold mb-4">
+        Hi, I'm <span style={{ color: "#FB5530" }}>Abegail</span>
+      </h1>
+      <p className="text-xl mb-8" style={{ color: "#A59385" }}>
+        Solving complex problems at the intersection of Mathematics, Data Analytics, and AI.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button
+          onClick={() => scrollToSection("#about")} // This needs to come from the layout
+          className="text-white border-2 hover:bg-gray-800"
+          style={{ backgroundColor: "#FB5530", borderColor: "#FB5530" }}
+        >
+          About
+        </Button>
+        <Button
+          onClick={() => scrollToSection("#projects")} // This needs to come from the layout
+          variant="outline"
+          className="border-2 hover:bg-gray-800"
+          style={{ borderColor: "#A59385", color: "#A59385" }}
+        >
+          Work
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* ================================================================== */}
         {/* SECTION 2: ABOUT ME (MOVED UP) */}
