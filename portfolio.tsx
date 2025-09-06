@@ -23,7 +23,7 @@ const TableauIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>)
 
 export default function Portfolio() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  {/* const [isMenuOpen, setIsMenuOpen] = useState(false) */}
   const [techToolsPage, setTechToolsPage] = useState(0)
   const [certificationsIndex, setCertificationsIndex] = useState(0)
   const [recentWorkFilter, setRecentWorkFilter] = useState("*");
@@ -97,7 +97,7 @@ export default function Portfolio() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
-    setIsMenuOpen(false)
+{/*}   setIsMenuOpen(false) */}
   }
 
     const recentWorkProjects = [
@@ -296,7 +296,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: "#111024", color: "white" }}>
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 w-full" style={{ backgroundColor: "#111024" }}>
+    {/*  <header className="fixed top-0 left-0 right-0 z-50 w-full" style={{ backgroundColor: "#111024" }}>
         <div className="flex items-center justify-between p-6 max-w-7xl mx-auto relative">
           <div className="text-xl font-bold">AbegailF.</div>
           <div className="flex items-center gap-2">
@@ -376,7 +376,7 @@ export default function Portfolio() {
             </div>
           )}
         </div>
-      </header>
+      </header>*/}
 
       {/* Main Content */}
       <main className="pt-20">
@@ -392,14 +392,14 @@ export default function Portfolio() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => scrollToSection("#about")}
+               onClick={() => scrollToSection("#about")} 
               className="text-white border-2 hover:bg-gray-800"
               style={{ backgroundColor: "#FB5530", borderColor: "#FB5530" }}
             >
               About
             </Button>
             <Button
-              onClick={() => scrollToSection("#projects")}
+               onClick={() => scrollToSection("#projects")}  
               variant="outline"
               className="border-2 hover:bg-gray-800"
               style={{ borderColor: "#A59385", color: "#A59385" }}
@@ -807,10 +807,10 @@ export default function Portfolio() {
         {/* ================================================================== */}
         {/* FOOTER */}
         {/* ================================================================== */}
-        <footer className="py-8 text-center text-gray-400 border-t border-gray-800">
+       {/*} <footer className="py-8 text-center text-gray-400 border-t border-gray-800">
           <p className="mb-4">© Copyright 2024. All rights reserved.</p>
           <p className="text-sm">Made with ❤️ using React + Tailwind</p>
-        </footer>
+        </footer> */}
       </main>
     </div>
   )
