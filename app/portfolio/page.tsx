@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Menu, X, ZoomIn, ExternalLink } from "lucide-react"
+import { Menu, X, ZoomIn, ExternalLink, ArrowLeft } from "lucide-react"
 
 export default function PortfolioPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -15,15 +15,15 @@ export default function PortfolioPage() {
      {
       id: 17, 
       title: "Automated Data Collation Script",
-      description: "AI, Excel, Python, Process Automation, Visual Studio Code",
+      description: "Excel, Python, Process Automation, Visual Studio Code, AI",
       image: "/images/python-data-collation.png", 
       categories: ["ai", "python","vscode", "processauto", "excel"], 
       link: "/projects/python-data-collation", 
     },
      {
       id: 16, 
-      title: "AI Worksheet-Answer Checker",
-      description: "AI, Python, LLM Evaluation, Process Automation, Visual Studio Code",
+      title: "Worksheet-Answer Checker",
+      description: "Python, LLM Evaluation, Process Automation, Visual Studio Code, AI",
       image: "/images/ws-answer checking.png", 
       categories: ["ai", "python","vscode", "processauto"],
       link: "/projects/ai-answer-checker",
@@ -214,7 +214,6 @@ export default function PortfolioPage() {
               ))}
           </div>
 
-            {/* Portfolio Grid */}
                        {/* Portfolio Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProjects.map((project) => (
@@ -242,15 +241,16 @@ export default function PortfolioPage() {
               ))}
             </div>
           </div>
+           <div className="pt-8">
+                <Link href="/">
+                  <Button variant="outline" className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent">
+                    <ArrowLeft className="w-4 h-4 mr-2" />
+                    Back to Home
+                  </Button>
+                </Link>
+              </div>
         </section>
-        {/* End of Portfolio Section */}
-        <section>
-            <div className="text-center gap-2 text-sm mb-4" style={{ color: "#A59385" }}>
-              <Link href="/">
-                 <Button variant="outline" className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent">Home</Button>
-              </Link>
-            </div>
-        </section>
+
         
       </div>
     </div>

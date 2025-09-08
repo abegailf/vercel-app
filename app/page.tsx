@@ -36,7 +36,7 @@ const certifications = [
       responsibilities: [
         "Rejoined the team in a dynamic environment that encourages AI exploration, allowing for the development of new automation tools.",
         "Successfully developed and implemented a Python script to automate the collation of spreadsheet data, streamlining a critical content workflow.",
-        "Spearheaded the R&D of a Python solution for automated worksheet answer-checking, rigorously testing various LLMs (OpenAI, Gemini) and collaborating with the team to analyze model accuracy and limitations.",
+        "Conducted the R&D of a Python solution for automated worksheet answer-checking, rigorously testing various LLMs (OpenAI, Gemini) and collaborating with the team to analyze model accuracy and limitations.",
         "Leveraging Google AI Studio to co-author Python scripts for generating statistical visualizations, such as histograms, for educational content.",
         "Developing a web application using Google AI Studio ('Problem Template Creator') to accelerate the creation of educational materials.",
         "Authoring and refining CLI-based AI prompts to auto-generate TSV code blocks, significantly improving the efficiency of content development.",
@@ -81,15 +81,15 @@ const allProjects = [
   {
       id: 17, 
       title: "Automated Data Collation Script",
-      description: "AI, Excel, Python, Process Automation, Visual Studio Code",
+      description: "Excel, Python, Process Automation, Visual Studio Code, AI",
       image: "/images/python-data-collation.png", 
       categories: ["ai", "python","vscode", "processauto", "excel"], 
       link: "/projects/python-data-collation", 
     },
      {
       id: 16, 
-      title: "AI Worksheet-Answer Checker",
-      description: "AI, Python, LLM Evaluation, Process Automation, Visual Studio Code",
+      title: "Worksheet-Answer Checker",
+      description: "Python, LLM Evaluation, Process Automation, Visual Studio Code, AI",
       image: "/images/ws-answer checking.png", 
       categories: ["ai", "python","vscode", "processauto"],
       link: "/projects/ai-answer-checker",
@@ -97,7 +97,7 @@ const allProjects = [
      {
       id: 14, 
       title: "AI-Powered Visualization Scripting", 
-      description: "AI, Python, Prompt Engineering", 
+      description: "Python, Prompt Engineering, AI", 
       image: "/images/histogram curve.png", 
        categories: ["ai", "python", "promptengineering"],
       link: "/projects/python-histogram-generator",
