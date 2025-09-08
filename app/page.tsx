@@ -257,7 +257,7 @@ export default function PortfolioPage() {
 
   return (
     <>
-      <section id="home" className="relative h-screen -mt-20">
+      <section id="home"  className="relative h-screen md:-mt-20">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full px-6">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">

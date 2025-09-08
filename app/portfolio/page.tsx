@@ -215,26 +215,13 @@ export default function PortfolioPage() {
         <section className="py-16 max-w-7xl mx-auto px-6">
           <div className="container">
             {/* Portfolio Filters */}
-            <div className="text-center mb-12">
-              <div className="flex flex-wrap gap-2 justify-center text-sm">
-                {filters.map((filter) => (
-                  <button
-                    key={filter.key}
-                    onClick={() => setActiveFilter(filter.key)}
-                    className={`px-4 py-2 rounded-full transition-colors ${
-                      activeFilter === filter.key ? "text-white" : "border hover:text-white"
-                    }`}
-                    style={{
-                      backgroundColor: activeFilter === filter.key ? "#FB5530" : "transparent",
-                      color: activeFilter === filter.key ? "white" : "#A59385",
-                      borderColor: activeFilter === filter.key ? "#FB5530" : "#A59385",
-                    }}
-                  >
-                    {filter.label}
+           <div className="flex flex-wrap justify-center gap-2 text-sm mb-8">
+              {filters.map((filter) => (
+                  <button key={filter.key} onClick={() => setActiveFilter(filter.key)} className={`px-3 py-1 rounded-full transition-colors ${activeFilter === filter.key ? "bg-orange-600 text-white" : "text-gray-400 hover:text-orange-600"}`}>
+                      {filter.label}
                   </button>
-                ))}
-              </div>
-            </div>
+              ))}
+          </div>
 
             {/* Portfolio Grid */}
                        {/* Portfolio Grid */}
