@@ -296,7 +296,7 @@ export default function ExcelSalesDashboard() {
             <div className="lg:col-span-1 lg:order-2">
               <Card className="border" style={{ backgroundColor: "#14132B", borderColor: "#A59385" }}>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">Project Overview</h3>
+                  <h3 className="text-xl font-bold mb-4 text-gray-300">Project Overview</h3>
                   <div className="space-y-4">
                     <div>
                       <strong style={{ color: "#FB5530" }}>Core Skills:</strong>

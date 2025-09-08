@@ -13,76 +13,92 @@ export default function PortfolioPage() {
 
   const projects = [
      {
-      id: 15, // <-- New ID
-      title: "AI Curation Agent for Curriculum",
-      description: "AI Agent Design, Content Curation, Gap Analysis",
-      image: "/images/pt curation.png", // Using a placeholder for now
-      categories: ["ai"], // Added 'ai' category
-      link: "/projects/ai-curation-agent", // <-- New link
+      id: 17, 
+      title: "Automated Data Collation Script",
+      description: "AI, Excel, Python, Process Automation, Visual Studio Code",
+      image: "/images/python-data-collation.png", 
+      categories: ["ai", "python","vscode", "processauto", "excel"], 
+      link: "/projects/python-data-collation", 
     },
      {
-      id: 14, // <-- Project ID
-      title: "AI-Powered Visualization Scripting", // <-- New Title
-      description: "Python, Matplotlib, AI Code Generation", // <-- New Description
-      image: "/images/histogram curve.png", // <-- YOUR NEW IMAGE
-      categories: ["excel"], // Placeholder category
+      id: 16, 
+      title: "AI Worksheet-Answer Checker",
+      description: "AI, Python, LLM Evaluation, Process Automation, Visual Studio Code",
+      image: "/images/ws-answer checking.png", 
+      categories: ["ai", "python","vscode", "processauto"],
+      link: "/projects/ai-answer-checker",
+    },
+     {
+      id: 15, 
+      title: "AI Curation Agent CLI-based",
+      description: "AI Agent Design, Prompt Engineering, Process Automation",
+      image: "/images/pt curation.png", 
+      categories: ["ai", "aiagent", "processauto", "promptengineering"],
+      link: "/projects/ai-curation-agent", 
+    },
+     {
+      id: 14, 
+      title: "AI-Powered Visualization Scripting", 
+      description: "AI, Python, Prompt Engineering", 
+      image: "/images/histogram curve.png", 
+       categories: ["ai", "python", "promptengineering"],
       link: "/projects/python-histogram-generator",
     },
        {
-      id: 13, // <-- New ID
-      title: "AI QA Agent for New Content",
-      description: "AI Agent Design, Quality Assurance Automation",
+      id: 13,
+      title: "AI QA Agent CLI-based for Content Requests",
+      description: "AI Agent Design, QA Automation, Prompt Engineering",
       image: "/images/qa pt request.png", 
-      categories: ["ga4"], // Placeholder category
-      link: "/projects/ai-qa-agent-requests", // <-- New link
+      categories: ["ai","aiagent", "processauto", "promptengineering"],
+      link: "/projects/ai-qa-agent-requests",
     },
         {
-      id: 12, // <-- New ID
-      title: "AI QA Agent for Content Alignment",
-      description: "AI Agent Design, Quality Assurance, Prompt Engineering",
-      image: "/images/qa ws-pt alignment.png", // Using a relevant placeholder
-      categories: ["ga4"], // Placeholder category
-      link: "/projects/ai-qa-agent", // <-- New link
+      id: 12,
+      title: "AI QA Agent CLI based for Content Alignment",
+      description: "AI Agent Design, QA Automation, Prompt Engineering",
+      image: "/images/qa ws-pt alignment.png", 
+      categories: ["ai","aiagent", "processauto", "promptengineering"],
+      link: "/projects/ai-qa-agent", 
+    },
+      {
+      id: 11, 
+      title: "AI PT Creator Agent CLI-based for Content Request",
+      description: "AI agent, Automation, Prompt Engineering",
+      image: "/images/pt request creation.png", 
+      categories: ["ai","aiagent", "processauto", "promptengineering"],
+      link: "/projects/ai-orchestrator-creation", 
     },
        {
-      id: 10, // <-- New ID
-      title: "AI Agent for Content Alignment",
+      id: 10, 
+      title: "AI PT Creator Agent CLI-based for Content Alignment",
       description: "Prompt Engineering, AI Agent Design, Automation",
-      image: "/images/ws-pt alignment creation.png", // Using a relevant placeholder
-      categories: ["ga4"], // Placeholder category, can create an 'ai' one later
-      link: "/projects/ai-orchestrator-alignment", // <-- New link
+      image: "/images/ws-pt alignment creation.png", 
+      categories: ["ai","aiagent", "processauto", "promptengineering"],
+      link: "/projects/ai-orchestrator-alignment", 
     },
       {
-      id: 11, // <-- New ID
-      title: "AI Agent for Content Creation",
-      description: "Prompt Engineering, System Architecture, Code Generation",
-      image: "/images/pt request creation.png", // Using a relevant placeholder
-      categories: ["ga4"], // Placeholder category
-      link: "/projects/ai-orchestrator-creation", // <-- New link
-    },
-      {
-      id: 9, // <-- New ID
-      title: "Problem Template Creator AI",
+      id: 9, 
+      title: "PT Creator AI",
       description: "Google AI Studio, Prompt Engineering, Automation",
-      image: "/images/Pt creator AI.png", // <-- New image
-      categories: ["ga4"], // Using a placeholder category for now, you can create a new one like 'ai' later
-      link: "/projects/pt-creator-ai", // <-- New link
+      image: "/images/Pt creator AI.png",
+      categories: ["googleAIstudio", "promptengineering", "processauto"], 
+      link: "/projects/pt-creator-ai", 
     },
        {
-      id: 8, // <-- New ID
+      id: 8, 
       title: "Store Pullout Automation (VBA)",
       description: "Excel, VBA, Process Automation",
-      image: "/images/inventory-replenishment.png", // Using placeholder image for now
-      categories: ["excel"],
-      link: "/projects/store-pullout-automation", // <-- New link
+      image: "/images/inventory-replenishment.png", 
+      categories: ["excel", "vba", "processauto"],
+      link: "/projects/store-pullout-automation", 
     },
       {
-      id: 7, // <-- New ID
+      id: 7, 
       title: "Inventory Replenishment Template",
       description: "Excel, Process Automation",
-      image: "/images/inventory-replenishment.png", // <-- New image
-      categories: ["excel"],
-      link: "/projects/inventory-replenishment", // <-- New link
+      image: "/images/inventory-replenishment.png", 
+      categories: ["excel", "processauto"],
+      link: "/projects/inventory-replenishment", 
     },
     {
       id: 3,
@@ -137,14 +153,25 @@ export default function PortfolioPage() {
   const filters = [
     { key: "*", label: "All" },
     { key: "sql", label: "SQL" },
+    { key: "vba", label: "VBA" },
     { key: "excel", label: "Excel" },
     { key: "tableau", label: "Tableau" },
     { key: "openrefine", label: "OpenRefine" },
     { key: "ga4", label: "Google Analytics (GA4)" },
+    { key: "ai", label: "AI" },
+    { key: "aiagent", label: "AI Agent" },
+    { key: "python", label: "Python" },
+    { key: "processauto", label: "Process Automation" },
+    { key: "vscode", label: "Visual Studio Code" },
+    { key: "promptengineering", label: "Prompt Engineering" },
+    { key: "googleAIstudio", label: "Google AI studio" },
     { key: "dataviz", label: "Data Visualization" },
     { key: "datacleaning", label: "Data Cleaning" },
     { key: "dataexp", label: "Data Exploration" },
+
   ]
+
+
 
   const scrollToSection = (sectionId: string) => {
     if (sectionId === "home") {
