@@ -103,13 +103,13 @@ export default function InventoryReplenishmentTemplate() {
 
               {/* Back to Portfolio */}
               <div className="pt-8 border-t border-gray-700">
-                <Link href="/work-project">
+                <Link href="/portfolio">
                   <Button
                     variant="outline"
                     className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent"
                   >
                     <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to work projects
+                    Back to Portfolio
                   </Button>
                 </Link>
               </div>

@@ -61,15 +61,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   style={{ backgroundColor: "#111024", border: "1px solid #A59385" }}
                 >
                   <div className="p-4">
-                    <button onClick={() => scrollToSection("home")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Home</button>
-                    <button onClick={() => scrollToSection("about")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>About Me</button>
-                    <button onClick={() => scrollToSection("experience")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Work Experience</button>
-                    <button onClick={() => scrollToSection("projects")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Recent Work</button>
-                    <button onClick={() => scrollToSection("personal-projects")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Personal Projects</button>
-                    <button onClick={() => scrollToSection("tech-tools")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Tech Tools</button>
-                    <button onClick={() => scrollToSection("certifications")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Certifications</button>
-                    <button onClick={() => scrollToSection("contact")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Get in Touch</button>
-                  </div>
+    <button onClick={() => scrollToSection("home")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Home</button>
+    <button onClick={() => scrollToSection("about")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>About Me</button>
+    <button onClick={() => scrollToSection("experience")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Work Experience</button>
+    <button onClick={() => scrollToSection("projects")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Featured Projects</button>
+    
+    {/* ================================================================== */}
+    {/* START: NEW PORTFOLIO LINK */}
+    {/* ================================================================== */}
+    <Link 
+      href="/portfolio" 
+      className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" 
+      style={{ color: "#A59385" }}
+      onClick={() => setIsMenuOpen(false)} // Close menu on click
+    >
+      Full Portfolio
+    </Link>
+    {/* ================================================================== */}
+    {/* END: NEW PORTFOLIO LINK */}
+    {/* ================================================================== */}
+
+    <button onClick={() => scrollToSection("tech-tools")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Tech Tools</button>
+    <button onClick={() => scrollToSection("certifications")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Certifications</button>
+    <button onClick={() => scrollToSection("contact")} className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800" style={{ color: "#A59385" }}>Get in Touch</button>
+</div>
                 </div>
               )}
             </div>

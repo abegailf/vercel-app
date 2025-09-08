@@ -325,13 +325,13 @@ export default function GamingIndustryCaseStudy() {
 
                 {/* Back to Projects */}
                 <div className="pt-8 border-t border-gray-700">
-                  <Link href="/">
+                  <Link href="/portfolio">
                     <Button
                       variant="outline"
                       className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent"
                     >
                       <ArrowLeft className="w-4 h-4 mr-2" />
-                      Back to Projects
+                      Back to Portfolio
                     </Button>
                   </Link>
                 </div>

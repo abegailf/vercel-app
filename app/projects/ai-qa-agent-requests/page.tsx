@@ -65,7 +65,7 @@ Your most critical function is to create, maintain, and update a persistent "Mas
               <div className="mb-8">
                 <div className="relative aspect-video rounded-lg overflow-hidden border border-gray-700">
                   <Image
-                    src="/images/Pt creator AI.png" // Using this as a placeholder for now
+                    src="/images/qa pt request.png" 
                     alt="AI QA Agent Concept Image"
                     fill
                     className="object-cover"

@@ -278,14 +278,14 @@ export default function ExcelSalesDashboard() {
 
                 {/* Back to Projects */}
                 <div className="pt-8 border-t" style={{ borderColor: "#A59385" }}>
-                  <Link href="/work-project">
+                  <Link href="/portfolio">
                     <Button
                       variant="outline"
                       className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent"
                       style={{ borderColor: "#FB5530", color: "#FB5530" }}
                     >
                       <ArrowLeft className="w-4 h-4 mr-2" />
-                      Back to work projects
+                      Back to Portfolio
                     </Button>
                   </Link>
                 </div>

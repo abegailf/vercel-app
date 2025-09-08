@@ -101,6 +101,14 @@ export default function Portfolio() {
   }
 
     const recentWorkProjects = [
+      {
+      id: 15, // <-- New ID
+      title: "AI Curation Agent for Curriculum",
+      description: "AI Agent Design, Content Curation, Gap Analysis",
+      image: "/images/pt curation.png", // Using a placeholder for now
+      categories: ["ai"], // Added 'ai' category
+      link: "/projects/ai-curation-agent", // <-- New link
+    },
        {
       id: 14, // <-- Project ID
       title: "AI-Powered Visualization Scripting", // <-- New Title
@@ -113,7 +121,7 @@ export default function Portfolio() {
       id: 13, // <-- New ID
       title: "AI QA Agent for New Content",
       description: "AI Agent Design, Quality Assurance Automation",
-      image: "/images/Pt creator AI.png", // Using a relevant placeholder
+      image: "/images/qa pt request.png", 
       categories: ["ga4"], // Placeholder category
       link: "/projects/ai-qa-agent-requests", // <-- New link
     },
@@ -181,9 +189,6 @@ export default function Portfolio() {
       categories: ["excel", "dataviz"],
       link: "/projects/excel-sales-dashboard",
     },
-  ];
-
-  const personalProjects = [
     {
       id: 1,
       title: "Google Merch Shop Case Study",
@@ -217,6 +222,7 @@ export default function Portfolio() {
       link: "/projects/tableau-vizzes",
     },
   ];
+
   const filters = [
     { key: "*", label: "All" },
     { key: "sql", label: "SQL" },
@@ -233,11 +239,6 @@ export default function Portfolio() {
   recentWorkFilter === "*"
     ? recentWorkProjects
     : recentWorkProjects.filter((project) => project.categories.includes(recentWorkFilter));
-
-  const filteredPersonalProjects =
-  personalProjectsFilter === "*"
-    ? personalProjects
-    : personalProjects.filter((project) => project.categories.includes(personalProjectsFilter));
 
   const techTools = [
     { logo: "/images/mysql-logo.png", name: "MySQL" },
@@ -359,89 +360,6 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: "#111024", color: "white" }}>
-      {/* Header */}
-    {/*  <header className="fixed top-0 left-0 right-0 z-50 w-full" style={{ backgroundColor: "#111024" }}>
-        <div className="flex items-center justify-between p-6 max-w-7xl mx-auto relative">
-          <div className="text-xl font-bold">AbegailF.</div>
-          <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white rounded-md p-2 hover:bg-[#A59385]/20 focus-visible:ring-2 focus-visible:ring-orange-600 transition-colors"
-              >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </Button>
-          </div>
-
-          {isMenuOpen && (
-            <div
-              className="absolute top-full right-0 mt-2 w-64 rounded-lg shadow-lg z-50"
-              style={{ backgroundColor: "#111024", border: "1px solid #A59385" }}
-            >
-              <div className="p-4">
-                <button
-                  onClick={() => scrollToSection("#home")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Home
-                </button>
-                <button
-                  onClick={() => scrollToSection("#about")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  About Me
-                </button>
-                <button
-                  onClick={() => scrollToSection("#experience")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Work Experience
-                </button>
-                <button
-                  onClick={() => scrollToSection("#projects")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Recent Work
-                </button>
-                <button
-                  onClick={() => scrollToSection("#personal-projects")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Personal Projects
-                </button>
-                <button
-                  onClick={() => scrollToSection("#tech-tools")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Tech Tools
-                </button>
-                <button
-                  onClick={() => scrollToSection("#certifications")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Certifications
-                </button>
-                 <button
-                  onClick={() => scrollToSection("#contact")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Get in Touch
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-      </header>*/}
-
       {/* Main Content */}
       <main className="pt-20">
         {/* ================================================================== */}
@@ -476,7 +394,7 @@ export default function Portfolio() {
           className="border-2 hover:bg-gray-800"
           style={{ borderColor: "#A59385", color: "#A59385" }}
         >
-          Work
+          Projects
         </Button>
       </div>
     </div>
@@ -565,13 +483,13 @@ export default function Portfolio() {
           </div>
         </section>
         {/* ================================================================== */}
-        {/* SECTION 4: RECENT WORK */}
+        {/* SECTION 4: PORTFOLIO */}
         {/* ================================================================== */}
         <section id="projects" className="py-16 max-w-4xl mx-auto px-6">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold mb-2">Recent Work</h2>
-             <Link href="/work-project" className="border-orange-600 text-orange-600 hover:text-white bg-transparent">
-              View all my work projects
+            <h2 className="text-2xl font-bold mb-2">Featured Projects</h2>
+             <Link href="/portfolio" className="border-orange-600 text-orange-600 hover:text-white bg-transparent">
+              View all my projects
             </Link>
           </div>
 
@@ -616,7 +534,7 @@ export default function Portfolio() {
           </div>
 
           <div className="text-center">
-            <Link href="/work-project">
+            <Link href="/portfolio">
               <Button
                 variant="outline"
                 className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent"
@@ -626,70 +544,6 @@ export default function Portfolio() {
             </Link>
           </div>
         </section>
-
-        {/* ================================================================== */}
-        {/* SECTION 5: PERSONAL PROJECTS */}
-        {/* ================================================================== */}
-        <section id="personal-projects" className="py-16 max-w-4xl mx-auto px-6">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold mb-2">Personal Projects</h2>
-            <Link href="/personal-project" className="border-orange-600 text-orange-600 hover:text-white bg-transparent">
-              View all my personal projects
-            </Link>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-2 text-sm mb-8">
-            {filters.map((filter) => (
-              <button
-                key={filter.key}
-                onClick={() => setPersonalProjectsFilter(filter.key)}
-                className={`px-3 py-1 rounded-full transition-colors ${
-                  personalProjectsFilter === filter.key ? "bg-orange-600 text-white" : "text-gray-400 hover:text-orange-600"
-                }`}
-              >
-                {filter.label}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-           {filteredPersonalProjects.map((project) => (
-              <Link key={project.id} href={project.link}>
-                <Card
-                  className="overflow-hidden cursor-pointer transition-transform hover:scale-105 border border-[#A59385]"
-                  style={{ backgroundColor: "#14132B" }}
-                >
-                  <CardContent className="p-0">
-                    <div className="aspect-video relative">
-                      <Image
-                        src={project.image || "/placeholder.svg"}
-                        alt={project.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h4 className="font-bold mb-2 text-[#FB5530]">{project.title}</h4>
-                      <p className="text-sm text-gray-400">{project.description}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link href="/personal-project">
-              <Button
-                variant="outline"
-                className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent"
-              >
-                View All
-              </Button>
-            </Link>
-          </div>
-        </section>
-
         {/* ================================================================== */}
         {/* SECTION 6: TECH TOOLS */}
         {/* ================================================================== */}
@@ -878,13 +732,6 @@ export default function Portfolio() {
         </section>
 
 
-        {/* ================================================================== */}
-        {/* FOOTER */}
-        {/* ================================================================== */}
-       {/*} <footer className="py-8 text-center text-gray-400 border-t border-gray-800">
-          <p className="mb-4">© Copyright 2024. All rights reserved.</p>
-          <p className="text-sm">Made with ❤️ using React + Tailwind</p>
-        </footer> */}
       </main>
     </div>
   )

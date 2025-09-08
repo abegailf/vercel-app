@@ -12,6 +12,94 @@ export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState("*")
 
   const projects = [
+     {
+      id: 15, // <-- New ID
+      title: "AI Curation Agent for Curriculum",
+      description: "AI Agent Design, Content Curation, Gap Analysis",
+      image: "/images/pt curation.png", // Using a placeholder for now
+      categories: ["ai"], // Added 'ai' category
+      link: "/projects/ai-curation-agent", // <-- New link
+    },
+     {
+      id: 14, // <-- Project ID
+      title: "AI-Powered Visualization Scripting", // <-- New Title
+      description: "Python, Matplotlib, AI Code Generation", // <-- New Description
+      image: "/images/histogram curve.png", // <-- YOUR NEW IMAGE
+      categories: ["excel"], // Placeholder category
+      link: "/projects/python-histogram-generator",
+    },
+       {
+      id: 13, // <-- New ID
+      title: "AI QA Agent for New Content",
+      description: "AI Agent Design, Quality Assurance Automation",
+      image: "/images/qa pt request.png", 
+      categories: ["ga4"], // Placeholder category
+      link: "/projects/ai-qa-agent-requests", // <-- New link
+    },
+        {
+      id: 12, // <-- New ID
+      title: "AI QA Agent for Content Alignment",
+      description: "AI Agent Design, Quality Assurance, Prompt Engineering",
+      image: "/images/qa ws-pt alignment.png", // Using a relevant placeholder
+      categories: ["ga4"], // Placeholder category
+      link: "/projects/ai-qa-agent", // <-- New link
+    },
+       {
+      id: 10, // <-- New ID
+      title: "AI Agent for Content Alignment",
+      description: "Prompt Engineering, AI Agent Design, Automation",
+      image: "/images/ws-pt alignment creation.png", // Using a relevant placeholder
+      categories: ["ga4"], // Placeholder category, can create an 'ai' one later
+      link: "/projects/ai-orchestrator-alignment", // <-- New link
+    },
+      {
+      id: 11, // <-- New ID
+      title: "AI Agent for Content Creation",
+      description: "Prompt Engineering, System Architecture, Code Generation",
+      image: "/images/pt request creation.png", // Using a relevant placeholder
+      categories: ["ga4"], // Placeholder category
+      link: "/projects/ai-orchestrator-creation", // <-- New link
+    },
+      {
+      id: 9, // <-- New ID
+      title: "Problem Template Creator AI",
+      description: "Google AI Studio, Prompt Engineering, Automation",
+      image: "/images/Pt creator AI.png", // <-- New image
+      categories: ["ga4"], // Using a placeholder category for now, you can create a new one like 'ai' later
+      link: "/projects/pt-creator-ai", // <-- New link
+    },
+       {
+      id: 8, // <-- New ID
+      title: "Store Pullout Automation (VBA)",
+      description: "Excel, VBA, Process Automation",
+      image: "/images/inventory-replenishment.png", // Using placeholder image for now
+      categories: ["excel"],
+      link: "/projects/store-pullout-automation", // <-- New link
+    },
+      {
+      id: 7, // <-- New ID
+      title: "Inventory Replenishment Template",
+      description: "Excel, Process Automation",
+      image: "/images/inventory-replenishment.png", // <-- New image
+      categories: ["excel"],
+      link: "/projects/inventory-replenishment", // <-- New link
+    },
+    {
+      id: 3,
+      title: "Inventory Forecasting Model",
+      description: "Excel",
+      image: "/images/inventory-forecast.png",
+      categories: ["excel"],
+      link: "/projects/inventory-forecast",
+    },
+    {
+      id: 4,
+      title: "Excel Sales Dashboard",
+      description: "Excel, Data Visualization",
+      image: "/images/kiddie-vogue-dashboard.png",
+      categories: ["excel", "dataviz"],
+      link: "/projects/excel-sales-dashboard",
+    },
     {
       id: 1,
       title: "Google Merch Shop Case Study",
@@ -79,91 +167,7 @@ export default function PortfolioPage() {
 
   return (
     <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: "#111024", color: "white" }}>
-      {/* Header */}
-            {/*  <header className="fixed top-0 left-0 right-0 z-50 w-full" style={{ backgroundColor: "#111024" }}>
-        <div className="flex items-center justify-between p-6 max-w-7xl mx-auto relative">
-          <Link href="/" className="text-xl font-bold">
-            AbegailF.
-          </Link>
-          <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white rounded-md p-2 hover:bg-[#A59385]/20 focus-visible:ring-2 focus-visible:ring-orange-600 transition-colors"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </Button>
-          </div>
-
-          {isMenuOpen && (
-            <div
-              className="absolute top-full right-0 mt-2 w-64 rounded-lg shadow-lg z-50"
-              style={{ backgroundColor: "#111024", border: "1px solid #A59385" }}
-            >
-              <div className="p-4">
-                <button
-                  onClick={() => scrollToSection("home")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Home
-                </button>
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  About Me
-                </button>
-                <button
-                  onClick={() => scrollToSection("experience")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Work Experience
-                </button>
-                <button
-                  onClick={() => scrollToSection("projects")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Recent Work
-                </button>
-                <button
-                  onClick={() => scrollToSection("personal-projects")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Personal Projects
-                </button>
-                <button
-                  onClick={() => scrollToSection("tech-tools")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Tech Tools
-                </button>
-                <button
-                  onClick={() => scrollToSection("certifications")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Certifications
-                </button>
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="block w-full text-left px-4 py-3 rounded-lg transition-colors hover:bg-gray-800"
-                  style={{ color: "#A59385" }}
-                >
-                  Get in Touch
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-      </header> */}
-     
+  
 
       <div className="pt-20">
         {/* Page Title */}
@@ -174,9 +178,9 @@ export default function PortfolioPage() {
                 Home
               </Link>
               <span>/</span>
-              <span>Personal Projects</span>
+              <span>Portfolio</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold">Personal Projects</h1>
+            <h1 className="text-4xl md:text-5xl font-bold">Portfolio</h1>
           </div>
         </section>
 

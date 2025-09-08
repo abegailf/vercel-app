@@ -1,25 +1,25 @@
-// File: app/projects/ai-qa-agent/page.tsx
+// File: app/projects/ai-curation-agent/page.tsx
 "use client"
 
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, ExternalLink, Bot, GitBranch, ShieldCheck, Github } from "lucide-react"
+import { ArrowLeft, ExternalLink, Bot, GitBranch, ShieldCheck } from "lucide-react"
 
-export default function AiQaAgent() {
-  const promptSnippet = `You are also the 'Worksheet-PT Alignment Orchestrator v1.2,' an expert AI assistant and meticulous state manager. Your sole purpose is to guide a human Quality Assurance Specialist through the complex process of validating a worksheet-to-problem-template (PT) alignment.
+export default function AiCurationAgent() {
+  const promptSnippet = `You are also the 'PT Curator v1.0,' an expert AI assistant and meticulous state manager. Your sole purpose is to guide a human Problem Template (PT) Curator through the process of analyzing a worksheet, identifying gaps in an existing PT set, evaluating potential new PTs to fill those gaps, and generating a final, curated list of PTs...
 
 Your most critical function is to create, maintain, and update a persistent "Master Alignment Log" throughout our session. This log will serve as our single source of truth for the entire task.
 
 You will operate based on a strict command system.
 ...
-[PROMPT: COMPREHENSIVE_REVIEW]
-- Purpose: A deep-dive quality check on newly created PTs.
-- Content: "You are a meticulous Quality Assurance Specialist for Mathematics Problem Templates... Your primary goal is to provide clear, constructive, and actionable feedback in a professional and collegial tone, as if you were communicating with a trusted coworker..."
+[PROMPT: GAP_ANALYSIS]
+- Purpose: To perform an initial analysis of the worksheet against the existing PT set, identify gaps, and initialize the log.
 ...
-[PROMPT: PT_QA_PROMPTS]
-- Content Bank: [SKILL_MEASUREMENT], [HINT_STRUCTURE], [FORBIDDEN_WORDS], [LOCALIZATION]...
+[PROMPT: PT_EVALUATION]
+- Purpose: To evaluate a new batch of candidate PTs against the identified skill gaps.
+- Content: "You are a pragmatic PT Curator. Your task is to evaluate a set of candidate PTs to see if they fill the uncovered skills gap..."
 ...`;
 
   return (
@@ -32,9 +32,9 @@ You will operate based on a strict command system.
             <span>/</span>
             <Link href="/portfolio" className="hover:text-orange-600 transition-colors">Portfolio</Link>
             <span>/</span>
-            <span>AI QA Agent for Content Alignment</span>
+            <span>AI Curation Agent</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">AI QA Agent for Content Alignment</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">AI Curation Agent for Curriculum Development</h1>
         </div>
       </section>
 
@@ -45,30 +45,30 @@ You will operate based on a strict command system.
           <div className="lg:col-span-2 lg:order-1">
             <div className="prose prose-lg max-w-none">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Ensuring Quality at Scale</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Curating the Perfect Problem Set</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  After creating new interactive math problems (PTs) to match a worksheet, the critical next step is quality assurance. We need to verify that the alignment is correct and that the newly created PTs are technically flawless, pedagogically sound, and free of errors.
+                  Building a set of interactive math problems for a specific curriculum topic is a complex curation task. It involves analyzing a target worksheet, identifying which concepts are already covered by our existing library of thousands of problems, and then finding the best *new* problems to fill any gaps.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  This QA process involves comparing multiple data sources (the AI's initial match, a creator's assessment, a coworker's review) and performing dozens of checks on every new XML file. Doing this manually is not just time-consuming, but also susceptible to human error and inconsistency.
+                  This process requires not only a deep pedagogical understanding but also a systematic approach to avoid selecting redundant problems or missing key skills. I designed an AI agent to act as a co-pilot for our curriculum curators, bringing speed, consistency, and data-driven rigor to this workflow.
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: A Collaborative AI QA Agent</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: A Systematic Curation Agent</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  I designed and engineered an "AI QA Agent" to act as a systematic and tireless partner for our Quality Assurance specialists. It operates via a CLI, managing the entire validation workflow from start to finish. The agent's core function is to maintain a persistent "Master Alignment Log," a JSON object that serves as the single source of truth for the entire QA task.
+                  I developed the 'PT Curator,' a command-line-driven AI agent that manages the entire curation lifecycle. The agent begins by performing a "gap analysis," comparing a worksheet to our existing content library and identifying uncovered skills.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The agent synthesizes feedback from multiple sources, runs a battery of specialized checks on new content, and collates all findings into a structured, actionable report.
+                  Then, when presented with a batch of new "candidate" problems, the agent evaluates each one against the identified gaps, flags duplicates or variants, and provides a clear recommendation on which ones to select. The entire process is tracked in a persistent "Master Alignment Log," ensuring a transparent and well-documented curation process.
                 </p>
               </div>
               
               <div className="mb-8">
                 <div className="relative aspect-video rounded-lg overflow-hidden border border-gray-700">
                   <Image
-                    src="/images/qa ws-pt alignment.png"
-                    alt="AI QA Agent Concept Image"
+                    src="/images/pt curation.png" // Using a placeholder for now
+                    alt="AI Curation Agent Concept Image"
                     fill
                     className="object-cover"
                   />
@@ -76,9 +76,9 @@ You will operate based on a strict command system.
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">A Library of Specialized QA Prompts</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">Engineering a Discerning AI Mindset</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The agent is equipped with a comprehensive internal library of prompts, each designed to perform a specific QA task. This includes a master "Comprehensive Review" prompt that checks for everything from mathematical accuracy to pedagogical effectiveness, as well as a suite of micro-prompts that can be called individually to check for specific issues like forbidden words, hint structure, or localization errors.
+                  The agent's ability to make intelligent recommendations comes from a master prompt that defines its persona as a "pragmatic PT Curator." I engineered its internal prompt library to handle distinct phases of the workflow, from the initial high-level gap analysis to the detailed evaluation of candidate problems. This transforms a general-purpose LLM into a specialized tool for making informed, consistent, and efficient content curation decisions.
                 </p>
                 <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 mt-6">
                   <div className="p-4 text-xs font-mono text-gray-300 whitespace-pre-wrap">
@@ -108,7 +108,7 @@ You will operate based on a strict command system.
                   <div>
                     <strong style={{ color: "#FB5530" }}>Core Skills:</strong>
                     <p className="text-sm mt-1" style={{ color: "#A59385" }}>
-                      AI Agent Design, Quality Assurance, Prompt Engineering, System Architecture
+                      AI Agent Design, Content Curation, Prompt Engineering, Gap Analysis
                     </p>
                   </div>
                   <div>
@@ -117,19 +117,7 @@ You will operate based on a strict command system.
                       CLI, Large Language Models (LLMs), JSON, TSV
                     </p>
                   </div>
-                  <div>
-                    <strong style={{ color: "#FB5530" }}>Project Link:</strong>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="mt-2 w-full bg-transparent flex items-center justify-center"
-                      style={{ borderColor: "#FB5530", color: "#FB5530" }}
-                      onClick={() => window.open("https://github.com/abegailf/CLI-QA-PTs-for-WS-PT-alignment-task", "_blank")}
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      View Prompt on GitHub
-                    </Button>
-                  </div>
+                  {/* You can add the GitHub link for the prompt here if you have one */}
                 </div>
               </CardContent>
             </Card>

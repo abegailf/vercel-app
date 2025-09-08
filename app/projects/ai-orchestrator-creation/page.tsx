@@ -69,7 +69,7 @@ You will operate based on a strict command system. I will give you a command, an
               <div className="mb-8">
                 <div className="relative aspect-video rounded-lg overflow-hidden border border-gray-700">
                   <Image
-                    src="/images/Pt creator AI.png" // Using this as a placeholder for now
+                    src="/images/pt request creation.png"
                     alt="AI Orchestrator Concept Image"
                     fill
                     className="object-cover"
@@ -91,10 +91,10 @@ You will operate based on a strict command system. I will give you a command, an
 
               {/* Back to Portfolio */}
               <div className="pt-8 border-t border-gray-700">
-                <Link href="/work-project">
+                <Link href="/portfolio">
                   <Button variant="outline" className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent">
                     <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to work projects
+                    Back to Portfolio
                   </Button>
                 </Link>
               </div>
