@@ -197,22 +197,13 @@ export default function PortfolioPage() {
   
 
       <div className="pt-20">
-        {/* Page Title */}
-        <section className="py-12 border-b" style={{ borderColor: "#A59385" }}>
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="flex items-center gap-2 text-sm mb-4" style={{ color: "#A59385" }}>
-              <Link href="/" className="transition-colors hover:text-white">
-                Home
-              </Link>
-              <span>/</span>
-              <span>Portfolio</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold">Portfolio</h1>
-          </div>
-        </section>
 
         {/* Portfolio Section */}
         <section className="py-16 max-w-7xl mx-auto px-6">
+           <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold mb-2">Portfolio</h2>
+
+          </div>
           <div className="container">
             {/* Portfolio Filters */}
            <div className="flex flex-wrap justify-center gap-2 text-sm mb-8">
@@ -251,6 +242,14 @@ export default function PortfolioPage() {
               ))}
             </div>
           </div>
+        </section>
+        {/* End of Portfolio Section */}
+        <section>
+            <div className="text-center gap-2 text-sm mb-4" style={{ color: "#A59385" }}>
+              <Link href="/">
+                 <Button variant="outline" className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent">Home</Button>
+              </Link>
+            </div>
         </section>
         
       </div>
