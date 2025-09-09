@@ -47,7 +47,7 @@ export default function SQLScripts() {
             <span>/</span>
             <span>SQL Scripts</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">SQL Scripts</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">From Raw Data to Ready-for-Analysis</h1>
         </div>
       </section>
 

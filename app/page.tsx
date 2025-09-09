@@ -28,19 +28,19 @@ const certifications = [
   { title: "Google Analytics (GA4)", issuer: "Google", date: "2023", icon: "GA", iconBg: "bg-blue-500", description: "An official certification validating expertise in using Google Analytics 4 (GA4) to measure and analyze website and app performance, including event tracking and reporting." },
 ];
 
- const workExperience = [
+  const workExperience = [
     {
       title: "MATHEMATICS DIGITAL CONTENT WRITER, MATHSPACE",
       location: "Remote",
       period: "Apr 2025 - Present",
       responsibilities: [
-        "Rejoined the team in a dynamic environment that encourages AI exploration, allowing for the development of new automation tools.",
-        "Successfully developed and implemented a Python script to automate the collation of spreadsheet data, streamlining a critical content workflow.",
-        "Conducted the R&D of a Python solution for automated worksheet answer-checking, rigorously testing various LLMs (OpenAI, Gemini) and collaborating with the team to analyze model accuracy and limitations.",
-        "Leveraging Google AI Studio to co-author Python scripts for generating statistical visualizations, such as histograms, for educational content.",
-        "Developing a web application using Google AI Studio ('Problem Template Creator') to accelerate the creation of educational materials.",
-        "Authoring and refining CLI-based AI prompts to auto-generate TSV code blocks, significantly improving the efficiency of content development.",
-        "Actively contributing to the team's AI adoption by troubleshooting complex prompts and sharing novel solutions, such as a workflow for AI-driven SVG image generation."
+        "I rejoined the team in a dynamic environment that really encourages AI exploration, which allowed me to develop new automation tools.",
+        "I took on an urgent data collation task and automated the process by building a Python script, turning a time-consuming manual job into an instant, one-click solution.",
+        "I conducted the R&D for a Python tool to automatically check worksheet answers, testing different LLMs like OpenAI and Gemini and working with the team to analyze the results.",
+        "I used Google AI Studio to co-author Python scripts that generate statistical visualizations, like histograms, for problem templates.",
+        "I developed a web application with Google AI Studio called the 'PT Creator AI' to help us create educational materials faster.",
+        "I authored and refined CLI-based AI prompts that can auto-generate TSV code blocks, which significantly improved content development efficiency.",
+        "I actively contribute to our team's AI adoption by helping troubleshoot complex prompts and sharing new solutions I discover, like a workflow for generating SVG images with AI."
       ],
     },
     {
@@ -48,9 +48,9 @@ const certifications = [
       location: "Pasay City, PH",
       period: "Jan 2025 - Feb 2025",
       responsibilities: [
-        "In a high-impact, one-month contract, developed and implemented multiple data solutions for e-commerce analytics using Excel and VBA.",
-        "Designed and built dynamic sales dashboards and inventory forecasting models to improve stock management.",
-        "Engineered custom VBA solutions to automate key inventory processes, including replenishment and store inventory pullouts."
+        "In a high-impact, one-month project, I developed and implemented several data solutions for their e-commerce analytics using Excel and VBA.",
+        "I designed and built dynamic sales dashboards and inventory forecasting models to help improve their stock management.",
+        "I also engineered custom VBA solutions to automate key inventory processes like replenishment and store pullouts."
       ],
     },
     {
@@ -58,11 +58,11 @@ const certifications = [
       location: "Remote",
       period: "Mar 2018 - Oct 2024",
       responsibilities: [
-        "Conducted data-driven analysis of problem template effectiveness using Metabase, translating insights from student attempt data into targeted content improvements.",
-        "Co-authored and refined math lessons and worksheets with XML-based content editing, ensuring alignment with educational standards and improving student comprehension",
-        "Developed and optimized over 3,000 dynamic, interactive problem templates using MathyonS scripting",
-        "Co-authored the first editions of Mathspace AU Books 7-10, ensuring rigorous curriculum alignment.",
-        "Recognized as a ClickUp Power User for streamlining team collaboration and improving content development workflows."
+        "I conducted data-driven analysis on our problem templates using Metabase, using insights from student data to make targeted improvements to the content.",
+        "I co-authored and refined math lessons and worksheets using XML-based tools to ensure they aligned with educational standards.",
+        "I developed and optimized over 4,000 dynamic and interactive problem templates using our scripting language, MathyonS.",
+        "I also co-authored the first editions of the Mathspace AU Books for years 7-10 to ensure curriculum alignment.",
+        "I was recognized as a ClickUp Power User for my work in streamlining our team's collaboration and content workflows."
       ],
     },
     {
@@ -70,87 +70,14 @@ const certifications = [
       location: "Alabang, PH",
       period: "Jun 2013 - Jan 2018",
       responsibilities: [
-        "Conducted financial data analysis using Excel to assist clients in investment planning and cash flow projections.",
-        "Achieved 100% of sales quota through data-informed advisory and strong client relationship management."
+        "I conducted financial data analysis in Excel to help clients with their investment planning and cash flow projections.",
+        "I consistently achieved 100% of my sales quota through data-informed advice and by building strong client relationships."
       ],
     },
   ];
 
-
 const allProjects = [
-  {
-      id: 17, 
-      title: "Data Collation Python Script",
-      description: "Excel, Python, Process Automation, Visual Studio Code, AI",
-      image: "/images/python-data-collation.png", 
-      categories: ["ai", "python","vscode", "processauto", "excel"], 
-      link: "/projects/python-data-collation", 
-    },
       {
-      id: 16, 
-      title: "Automated Worksheet-Answer Checker",
-      description: "Python, LLM Evaluation, Process Automation, Visual Studio Code, AI",
-      image: "/images/ws-answer checking.png", 
-      categories: ["ai", "python","vscode", "processauto"],
-      link: "/projects/ai-answer-checker",
-    },
-     {
-      id: 14, 
-      title: "Data Visualization Scripting",  
-      description: "Python, Prompt Engineering, AI", 
-      image: "/images/histogram curve.png", 
-       categories: ["ai", "python", "promptengineering"],
-      link: "/projects/python-histogram-generator",
-    },
-        {
-      id: 12,
-      title: "Worksheet-PT Alignment QA Specialist Agent CLI",
-      description: "AI Agent Design, QA Automation, Prompt Engineering",
-      image: "/images/qa ws-pt alignment.png", 
-      categories: ["ai","aiagent", "processauto", "promptengineering"],
-      link: "/projects/ai-qa-agent", 
-    },
-       {
-      id: 10, 
-      title: "Worksheet-PT Alignment Agent CLI",
-      description: "Prompt Engineering, AI Agent Design, Automation",
-      image: "/images/ws-pt alignment creation.png", 
-      categories: ["ai","aiagent", "processauto", "promptengineering"],
-      link: "/projects/ai-orchestrator-alignment", 
-    },
-       {
-      id: 8, 
-      title: "Store Pullout Automation (VBA)",
-      description: "Excel, VBA, Process Automation",
-      image: "/images/inventory-replenishment.png", 
-      categories: ["excel", "vba", "processauto"],
-      link: "/projects/store-pullout-automation", 
-    },
-      {
-      id: 7, 
-      title: "Inventory Replenishment Template",
-      description: "Excel, Process Automation",
-      image: "/images/inventory-replenishment.png", 
-      categories: ["excel", "processauto"],
-      link: "/projects/inventory-replenishment", 
-    },
-    {
-      id: 3,
-      title: "Inventory Forecasting Model",
-      description: "Excel",
-      image: "/images/inventory-forecast.png",
-      categories: ["excel"],
-      link: "/projects/inventory-forecast",
-    },
-    {
-      id: 4,
-      title: "Excel Sales Dashboard",
-      description: "Excel, Data Visualization",
-      image: "/images/kiddie-vogue-dashboard.png",
-      categories: ["excel", "dataviz"],
-      link: "/projects/excel-sales-dashboard",
-    },
-    {
       id: 2,
       title: "Uncovering Market Trends in the Gaming Industry",
       description: "SQL, OpenRefine, Tableau, Data Cleaning, Data Exploration, Data Visualization",
@@ -159,8 +86,16 @@ const allProjects = [
       link: "/projects/gaming-industry",
     },
     {
+      id: 1,
+      title: "Driving E-commerce Insights with GA4",
+      description: "Google Analytics (GA4)",
+      image: "/images/google-merch-display-new.png",
+      categories: ["ga4"],
+      link: "/projects/google-merch",
+    },
+    {
       id: 5,
-      title: "SQL Scripts",
+      title: "From Raw Data to Ready-for-Analysis",
       description: "SQL, Data Cleaning, Data Exploration",
       image: "/images/sql-scripts-display.png",
       categories: ["sql", "datacleaning", "dataexp"],
@@ -174,6 +109,94 @@ const allProjects = [
       categories: ["tableau", "dataviz"],
       link: "/projects/tableau-vizzes",
     },
+       {
+      id: 4,
+      title: "Excel Sales Dashboard",
+      description: "Excel, Data Visualization",
+      image: "/images/kiddie-vogue-dashboard.png",
+      categories: ["excel", "dataviz"],
+      link: "/projects/excel-sales-dashboard",
+    },
+      {
+      id: 3,
+      title: "Inventory Forecasting Model",
+      description: "Excel",
+      image: "/images/inventory-forecast.png",
+      categories: ["excel"],
+      link: "/projects/inventory-forecast",
+    },
+         {
+      id: 7, 
+      title: "Inventory Replenishment Template",
+      description: "Excel, Process Automation",
+      image: "/images/inventory-replenishment.png", 
+      categories: ["excel", "processauto"],
+      link: "/projects/inventory-replenishment", 
+    },
+           {
+      id: 8, 
+      title: "Store Pullout Automation (VBA)",
+      description: "Excel, VBA, Process Automation",
+      image: "/images/inventory-replenishment.png", 
+      categories: ["excel", "vba", "processauto"],
+      link: "/projects/store-pullout-automation", 
+    },
+  {
+      id: 17, 
+      title: "Data Collation Python Script",
+      description: "Excel, Python, Process Automation, Visual Studio Code, AI",
+      image: "/images/python-data-collation.png", 
+      categories: ["ai", "python","vscode", "processauto", "excel"], 
+      link: "/projects/python-data-collation", 
+    },
+     {
+      id: 16, 
+      title: "Automated Worksheet-Answer Checker",
+      description: "Python, LLM Evaluation, Process Automation, Visual Studio Code, AI",
+      image: "/images/ws-answer checking.png", 
+      categories: ["ai", "python","vscode", "processauto"],
+      link: "/projects/ai-answer-checker",
+    },
+     {
+      id: 15, 
+      title: "PT Curation Agent CLI",
+      description: "AI Agent Design, Prompt Engineering, Process Automation",
+      image: "/images/pt curation.png", 
+      categories: ["ai", "aiagent", "processauto", "promptengineering"],
+      link: "/projects/ai-curation-agent", 
+    },
+     {
+      id: 14, 
+      title: "Data Visualization Scripting", 
+      description: "AI, Python, Prompt Engineering", 
+      image: "/images/histogram curve.png", 
+       categories: ["ai", "python", "promptengineering"],
+      link: "/projects/python-histogram-generator",
+    },
+            {
+      id: 12,
+      title: "Worksheet-PT Alignment QA Specialist Agent CLI",
+      description: "AI Agent Design, QA Automation, Prompt Engineering",
+      image: "/images/qa ws-pt alignment.png", 
+      categories: ["ai","aiagent", "processauto", "promptengineering"],
+      link: "/projects/ai-qa-agent", 
+    },
+      {
+      id: 10, 
+      title: "Worksheet-PT Alignment Agent CLI",
+      description: "Prompt Engineering, AI Agent Design, Automation",
+      image: "/images/ws-pt alignment creation.png", 
+      categories: ["ai","aiagent", "processauto", "promptengineering"],
+      link: "/projects/ai-orchestrator-alignment", 
+    },
+      {
+      id: 9, 
+      title: "PT Creator AI",
+      description: "Google AI Studio, Prompt Engineering, Automation",
+      image: "/images/Pt creator AI.png",
+      categories: ["googleAIstudio", "promptengineering", "processauto"], 
+      link: "/projects/pt-creator-ai", 
+    },
   ]
 
   const filters = [
@@ -183,12 +206,14 @@ const allProjects = [
     { key: "excel", label: "Excel" },
     { key: "tableau", label: "Tableau" },
     { key: "openrefine", label: "OpenRefine" },
+    { key: "ga4", label: "Google Analytics (GA4)" },
     { key: "ai", label: "AI" },
     { key: "aiagent", label: "AI Agent" },
     { key: "python", label: "Python" },
     { key: "processauto", label: "Process Automation" },
     { key: "vscode", label: "Visual Studio Code" },
     { key: "promptengineering", label: "Prompt Engineering" },
+    { key: "googleAIstudio", label: "Google AI studio" },
     { key: "dataviz", label: "Data Visualization" },
     { key: "datacleaning", label: "Data Cleaning" },
     { key: "dataexp", label: "Data Exploration" },
@@ -257,7 +282,7 @@ export default function PortfolioPage() {
 
   return (
     <>
-      <section id="home"  className="relative h-screen md:-mt-20">
+      <section id="home"  className="relative h-screen">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full px-6">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
@@ -288,10 +313,14 @@ export default function PortfolioPage() {
             <div className="w-40 h-40 rounded-full overflow-hidden mb-8 border-2 border-orange-600/50">
                 <Image src="/images/about-pic.jpg" alt="Abegail Fontanilla" width={160} height={160} className="w-full h-full object-cover" />
             </div>
-            <div>
-                <h2 className="text-3xl font-bold mb-6">About Me</h2>
-                <p className="text-lg mb-6" style={{ color: "#A59385" }}>My journey into data began with a deep appreciation for the structure and elegance of Mathematics. This foundation gives me a unique, first-principles approach to problem-solving. I've applied this mindset in fast-paced business environments, transforming complex e-commerce challenges into efficient, automated solutions using tools like Excel and VBA to build everything from dynamic sales dashboards to inventory forecasting models.</p>
-                <p className="text-lg mb-8" style={{ color: "#A59385" }}>What truly excites me is building the next generation of data tools. I thrive in environments that encourage innovation, where I've conducted R&D projects for AI-driven automation, engineered Python scripts with OpenAI and Gemini, and developed web applications using Google AI Studio. My goal is to combine my practical business analysis skills with my passion for building, creating intelligent data solutions that are not only insightful but also scalable and efficient.</p>
+             <div>
+              <h2 className="text-3xl font-bold mb-6">About Me</h2>
+              <p className="text-lg mb-6" style={{ color: "#A59385" }}>
+                My journey into data really started with my love for Math. I appreciate its structure and elegance, and it gives me a unique way of looking at problems. I've used this mindset in my work to handle complex e-commerce challenges. I enjoy turning them into efficient, automated solutions using tools like Excel and VBA to build things like sales dashboards and inventory forecasting models.
+              </p>
+              <p className="text-lg mb-8" style={{ color: "#A59385" }}>
+                What really excites me now is building the next generation of data tools. I love working in places that encourage innovation. It's where I've been able to conduct R&D on AI automation, engineer Python scripts with OpenAI and Gemini, and even develop web apps using Google AI Studio. My goal is to use my practical business analysis skills and combine it with my passion for building—to create smart data solutions that are not just insightful, but also scalable and efficient.
+              </p>
             </div>
         </div>
       </section>
@@ -337,7 +366,7 @@ export default function PortfolioPage() {
               ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-              {filteredProjects.slice(0, 12).map((project) => (
+              {filteredProjects.slice(0, 21).map((project) => (
                   <Link key={project.id} href={project.link}>
                       <Card className="overflow-hidden cursor-pointer transition-transform hover:scale-105 border border-[#A59385]" style={{ backgroundColor: "#14132B" }}>
                           <CardContent className="p-0">

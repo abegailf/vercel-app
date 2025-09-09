@@ -134,7 +134,7 @@ export default function PortfolioPage() {
     },
     {
       id: 5,
-      title: "SQL Scripts",
+      title: "From Raw Data to Ready-for-Analysis",
       description: "SQL, Data Cleaning, Data Exploration",
       image: "/images/sql-scripts-display.png",
       categories: ["sql", "datacleaning", "dataexp"],
