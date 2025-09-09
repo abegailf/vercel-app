@@ -53,7 +53,7 @@ def group_and_combine_tsvs(folder_path, output_filename):
             <span>/</span>
             <span>Automated Data Collation Script</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">Automated Data Collation Script in Python</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">Data Collation Python Script</h1>
         </div>
       </section>
 
@@ -64,22 +64,22 @@ def group_and_combine_tsvs(folder_path, output_filename):
           <div className="lg:col-span-2 lg:order-1">
             <div className="prose prose-lg max-w-none">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Disorganized Data Files</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: An Urgent, Manual Task</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  A common workflow at Mathspace involved dealing with numerous TSV (Tab-Separated Values) files that were exported from our systems. These files were all in a single folder but needed to be grouped and analyzed based on their naming convention—specifically, a 4-digit prefix and a type ('outcomes' or 'questions').
+                   My manager posted an urgent request on Slack. She needed help with a simple but very time-consuming admin task: collating data from a large folder of TSV files. The task was for a new workflow for external contractors and involved a lot of manual copy-pasting and renaming.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Manually opening, copying, and pasting this data into a master Excel workbook was not only slow and tedious but also highly susceptible to human error. I saw a clear need for a simple, reusable script to automate this entire collation process.
+                  I saw that the files had a clear naming pattern, and I knew that doing it manually would be slow and could lead to mistakes. So, when I took on the task, I decided to build a simple Python script to automate it instead.
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: A Smart Python Script</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: A Simple Python Script</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  I wrote a Python script using the Pandas and OS libraries to solve this problem. The script intelligently scans a folder, reads the filenames, and automatically groups them. It then combines all the data from the files in each group and writes the consolidated data to a separate, neatly named sheet in a single master Excel workbook.
+                   Using Python with the Pandas library, I wrote a script that automatically handles the entire job. I actually "vibe-coded" this one with Google AI Studio, guiding it to build the logic I needed to scan the folder, group all the files based on their names ('outcomes' or 'questions'), and then combine the data from each group.
                 </p>
                  <p className="text-gray-300 leading-relaxed mb-6">
-                  What was once a manual 15-30 minute task of data wrangling is now an instant, error-free process that anyone on the team can run.
+                   The final output is a single, perfectly organized Excel file, with each group of data on its own neatly named sheet. What could have been a repetitive, manual task became a quick, one-click process that I could finish right away.
                 </p>
               </div>
               
@@ -121,6 +121,19 @@ def group_and_combine_tsvs(folder_path, output_filename):
                     <p className="text-sm mt-1" style={{ color: "#A59385" }}>
                       Python, Pandas, Openpyxl
                     </p>
+                  </div>
+                    <div>
+                    <strong style={{ color: "#FB5530" }}>Project Link:</strong>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="mt-2 w-full bg-transparent"
+                      style={{ borderColor: "#FB5530", color: "#FB5530" }}
+                      onClick={() => window.open("https://github.com/abegailf/Automated-collation-task", "_blank")}
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      View Code on GitHub
+                    </Button>
                   </div>
                 </div>
               </CardContent>

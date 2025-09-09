@@ -38,148 +38,6 @@ export default function GamingIndustryCaseStudy() {
 
   return (
     <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: "#111024", color: "white" }}>
-      {/*  <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: "#111024" }}>
-        <div className="flex items-center justify-between p-6 max-w-7xl mx-auto">
-          <Link href="/" className="text-xl font-bold">
-            AbegailF.
-          </Link>
-          <div className="flex items-center gap-6">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-lg transition-colors"
-              style={{ color: "#FB5530" }}
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-            <nav className="hidden md:flex items-center gap-6 text-sm">
-              <Link
-                href="/"
-                className="transition-colors"
-                style={{ color: "#A59385" }}
-                onMouseEnter={(e) => (e.target.style.color = "#FB5530")}
-                onMouseLeave={(e) => (e.target.style.color = "#A59385")}
-              >
-                Home
-              </Link>
-              <Link
-                href="/#recentwork"
-                className="transition-colors"
-                style={{ color: "#A59385" }}
-                onMouseEnter={(e) => (e.target.style.color = "#FB5530")}
-                onMouseLeave={(e) => (e.target.style.color = "#A59385")}
-              >
-                Recent Work
-              </Link>
-              <Link
-                href="/#personalprojects"
-                className="transition-colors"
-                style={{ color: "#A59385" }}
-                onMouseEnter={(e) => (e.target.style.color = "#FB5530")}
-                onMouseLeave={(e) => (e.target.style.color = "#A59385")}
-              >
-                Personal Projects
-              </Link>
-              <Link
-                href="/#techtools"
-                className="transition-colors"
-                style={{ color: "#A59385" }}
-                onMouseEnter={(e) => (e.target.style.color = "#FB5530")}
-                onMouseLeave={(e) => (e.target.style.color = "#A59385")}
-              >
-                Tech Tools
-              </Link>
-              <Link
-                href="/#certifications"
-                className="transition-colors"
-                style={{ color: "#A59385" }}
-                onMouseEnter={(e) => (e.target.style.color = "#FB5530")}
-                onMouseLeave={(e) => (e.target.style.color = "#A59385")}
-              >
-                Certifications
-              </Link>
-              <Link
-                href="/#experience"
-                className="transition-colors"
-                style={{ color: "#A59385" }}
-                onMouseEnter={(e) => (e.target.style.color = "#FB5530")}
-                onMouseLeave={(e) => (e.target.style.color = "#A59385")}
-              >
-                Work Experience
-              </Link>
-              <Link
-                href="/#about"
-                className="transition-colors"
-                style={{ color: "#A59385" }}
-                onMouseEnter={(e) => (e.target.style.color = "#FB5530")}
-                onMouseLeave={(e) => (e.target.style.color = "#A59385")}
-              >
-                About Me
-              </Link>
-            </nav>
-          </div>
-        </div>
-
-        {isMenuOpen && (
-          <div
-            className="md:hidden absolute top-full left-0 right-0 border-t"
-            style={{ backgroundColor: "#111024", borderColor: "#A59385" }}
-          >
-            <nav className="flex flex-col p-6 space-y-4">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="text-left transition-colors"
-                style={{ color: "#A59385" }}
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection("recentwork")}
-                className="text-left transition-colors"
-                style={{ color: "#A59385" }}
-              >
-                Recent Work
-              </button>
-              <button
-                onClick={() => scrollToSection("personalprojects")}
-                className="text-left transition-colors"
-                style={{ color: "#A59385" }}
-              >
-                Personal Projects
-              </button>
-              <button
-                onClick={() => scrollToSection("techtools")}
-                className="text-left transition-colors"
-                style={{ color: "#A59385" }}
-              >
-                Tech Tools
-              </button>
-              <button
-                onClick={() => scrollToSection("certifications")}
-                className="text-left transition-colors"
-                style={{ color: "#A59385" }}
-              >
-                Certifications
-              </button>
-              <button
-                onClick={() => scrollToSection("experience")}
-                className="text-left transition-colors"
-                style={{ color: "#A59385" }}
-              >
-                Work Experience
-              </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="text-left transition-colors"
-                style={{ color: "#A59385" }}
-              >
-                About Me
-              </button>
-            </nav>
-          </div>
-        )}
-      </header */}
-     
-
       <div className="pt-20">
         {/* Page Title */}
         <section className="py-12 border-b border-gray-800">
@@ -191,7 +49,7 @@ export default function GamingIndustryCaseStudy() {
               <span>/</span>
               <span>Portfolio Details</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold">Gaming Industry Case Study</h1>
+            <h1 className="text-4xl md:text-5xl font-bold">Uncovering Market Trends in the Gaming Industry</h1>
           </div>
         </section>
 
@@ -237,91 +95,56 @@ export default function GamingIndustryCaseStudy() {
             {/* Main Content */}
             <div className="lg:col-span-2">
               <div className="prose prose-lg max-w-none">
-                <div className="mb-8">
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    In this project, I conducted an in-depth analysis of video game sales using SQL and OpenRefine to
-                    extract, clean, and normalize complex datasets. OpenRefine was particularly useful in standardizing
-                    video game names, which often have inconsistent naming conventions (e.g., "King Kong" vs.
-                    "KingKong", "Final Fantasy 7" vs. "Final Fantasy VII"). The{" "}
-                    <strong className="text-white">Clustering Facet</strong> feature in OpenRefine helped group and
-                    merge these variations efficiently, ensuring accurate data aggregation and analysis.
-                  </p>
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    Leveraging Tableau, I created insightful visualizations to highlight key trends in platform
-                    preferences, genre popularity, and regional sales performance. The findings were compiled into a
-                    comprehensive PDF report that includes strategic recommendations for sustained market growth.
-                  </p>
-                </div>
+                           <div className="prose prose-lg max-w-none">
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Goal: Analyzing Video Game Sales Data</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  For this project, I wanted to do a full, deep-dive analysis of a video game sales dataset. The main goal was to practice the entire data analysis process, from cleaning the raw data all the way to providing strategic recommendations for a business.
+                </p>
+                <p className="text-gray-300 leading-relaxed font-bold mb-4">I set a few key objectives for my analysis:</p>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4 mb-8">
+                    <li>Find the top-performing games, genres, and consoles.</li>
+                    <li>Understand what types of games are popular in different regions, like North America vs. Japan.</li>
+                    <li>See how critic scores impact sales.</li>
+                </ul>
+              </div>
 
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-4 text-orange-600">Project Objectives:</h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                    <li>Identify top-performing games, genres, and consoles.</li>
-                    <li>Understand regional preferences and seasonal trends.</li>
-                    <li>Track shifts in genre and console popularity over time.</li>
-                    <li>Analyze the impact of critic scores on sales performance.</li>
-                  </ul>
-                </div>
-
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-4 text-orange-600">Strategic Recommendations:</h3>
-                  <ul className="list-disc list-inside space-y-4 text-gray-300 ml-4">
-                    <li>
-                      <strong className="text-white">Focus on High-Quality Shooter and Action Games:</strong>
-                      <span className="block mt-1">
-                        Prioritizing the development of high-quality Shooter and Action games for PlayStation and Xbox,
-                        particularly with Q4 releases, can maximize holiday sales and strengthen brand loyalty. Ensuring
-                        strong critic scores through rigorous quality assurance will enhance market impact and overall
-                        sales potential.
-                      </span>
-                    </li>
-                    <li>
-                      <strong className="text-white">Implement Targeted Regional Marketing:</strong>
-                      <span className="block mt-1">
-                        Adapting marketing strategies to align with regional preferences can boost engagement. For
-                        example, focusing on Shooters and sports titles in North America and Europe/Africa, while
-                        promoting RPGs and locally developed games in Japan, can enhance brand visibility and drive
-                        stronger regional sales.
-                      </span>
-                    </li>
-                    <li>
-                      <strong className="text-white">Diversify Genre Offerings:</strong>
-                      <span className="block mt-1">
-                        Expanding beyond Shooter and Action genres into RPGs, simulations, and strategy games can
-                        attract a wider audience and diversify revenue streams. This approach reduces dependency on
-                        top-performing genres and strengthens the company's position across multiple gaming markets.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="mb-8">
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    This project not only honed my skills in data manipulation and visualization but also provided
-                    valuable insights into the strategic dimensions of business intelligence within the gaming industry.
-                  </p>
-
-                  <Button
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Process: From Messy Data to Clean Insights</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  The first big challenge was cleaning the data. The game names were very inconsistent (like "King Kong" vs "KingKong"), so I used SQL and OpenRefine to clean and normalize everything. The "Clustering Facet" in OpenRefine was especially helpful for grouping all the different name variations together, which was critical for accurate analysis.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  After cleaning the data, I used Tableau to create a lot of visualizations. This helped me to easily see the key trends in platform preferences, genre popularity, and regional sales performance.
+                </p>
+              </div>
+              
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Outcome: Strategic Recommendations</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Based on all my findings, I put together a full PDF report. It doesn't just show the data; it also includes strategic recommendations that a real gaming company could use. For example, I recommended focusing on high-quality Shooter and Action games for the holiday season and adapting marketing strategies for different regions.
+                </p>
+                <Button
                     variant="outline"
                     className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white mb-8 bg-transparent"
                     onClick={handleDownloadPDF}
                   >
                     <Download className="w-4 h-4 mr-2" />
-                    Download Report
-                  </Button>
-                </div>
+                    Download Full Report
+                </Button>
+              </div>
 
-                {/* Project Image */}
-                <div className="mb-8">
-                  <div className="relative aspect-video rounded-lg overflow-hidden">
-                    <Image
-                      src="/images/game-console.png"
-                      alt="Gaming Industry Case Study Analysis"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+              <div className="mb-8">
+                <div className="relative aspect-video rounded-lg overflow-hidden border border-gray-700">
+                  <Image
+                    src="/images/game-console.png"
+                    alt="Gaming Industry Case Study Dashboard"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
+              </div>
+            </div>
 
                 {/* Back to Projects */}
                 <div className="pt-8 border-t border-gray-700">

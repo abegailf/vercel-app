@@ -36,7 +36,7 @@ You will operate based on a strict command system. I will give you a command, an
             <span>/</span>
             <span>AI Agent for Content Creation</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">AI Orchestrator for Content Creation</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">PT Creation Agent CLI-based</h1>
         </div>
       </section>
 
@@ -46,23 +46,24 @@ You will operate based on a strict command system. I will give you a command, an
           {/* Main Content */}
           <div className="lg:col-span-2 lg:order-1">
             <div className="prose prose-lg max-w-none">
+                          <div className="prose prose-lg max-w-none">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Scaling New Content Production</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Creating New Problem Templates is Tough</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  While my other AI orchestrator solved the problem of aligning existing content, Mathspace also needed a way to accelerate the creation of entirely new interactive problems from scratch. The process starts with a simple document outlining dozens of new questions, but turning that document into a set of technically compliant, randomized, and pedagogically sound XML files is a major development effort.
+                  At work, a department will send us a document with a request to create a whole new set of interactive math problems (PTs) for a subtopic. My task is to build all of them from scratch.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The key challenge was efficiency: how could we intelligently group similar problems, avoid redundant work, and automate the highly repetitive aspects of XML and script generation?
+                  The main problem is that turning a simple document into many technically correct and randomized XML files is a huge effort. I found the real challenge was how to do it efficiently. I needed a way to group similar problems so I wouldn't have to do the same work over and over, and a way to automate the repetitive parts of writing the code.
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: An End-to-End Development Agent</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: An AI Agent to Help Me Build Faster</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  I designed the 'PT Creation Orchestrator,' a second AI agent focused on the "net new" creation workflow. It ingests a standard PT request document and guides the user through an optimized production pipeline via a command-line interface.
+                  To solve this, I designed the 'PT Creation Agent.' It's an AI tool I use in the command line that helps me manage the entire creation process. It takes the request document and helps me build all the PTs in a much more organized way.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The system's first move is to analyze all the requested problems and identify "prototypes"—structurally unique questions that can serve as a template for others. By building these complex prototypes first, the agent can then rapidly generate all the remaining variations, saving a massive amount of development time.
+                  The first thing the agent does is read the whole document and identify "prototypes." These are the unique questions that can be used as a template for the others. This is the key to working fast. Once I build the main prototypes with the agent's help, it can then generate all the other similar PTs very quickly. It saves me a lot of time.
                 </p>
               </div>
               
@@ -70,7 +71,7 @@ You will operate based on a strict command system. I will give you a command, an
                 <div className="relative aspect-video rounded-lg overflow-hidden border border-gray-700">
                   <Image
                     src="/images/pt request creation.png"
-                    alt="AI Orchestrator Concept Image"
+                    alt="AI Agent for Content Creation Concept Image"
                     fill
                     className="object-cover"
                   />
@@ -78,16 +79,55 @@ You will operate based on a strict command system. I will give you a command, an
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">Stateful and Systematic by Design</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">How I Built It: A "Megaprompt" Design</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Like its alignment-focused counterpart, this orchestrator is a stateful agent that maintains a persistent JSON log of the entire creation process. The master prompt defines its complete command system and internal library of specialized sub-prompts, which handle everything from formatting the initial request to parsing the final generated XML into a structured TSV for easy review.
+                  The way I made the agent smart was by creating a single, really big "megaprompt." This main prompt contains everything, its personality, how it remembers things with the JSON log, and all the rules it has to follow.
                 </p>
-                <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 mt-6">
-                  <div className="p-4 text-xs font-mono text-gray-300 whitespace-pre-wrap">
-                    <code>{promptSnippet}</code>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Inside this megaprompt, I also built a library of smaller, specialized prompts. So when I give the agent a command like `/run identify_prototypes`, it knows to use the specific sub-prompt for that task. This is how it can do different, complex jobs like analyzing the document or creating the XML code.
+                </p>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Commands I Use</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  I built the agent to follow a command system that guides me through the entire workflow, from planning to final changes.
+                </p>
+                <div className="text-left text-sm text-gray-300 space-y-6">
+                  {/* Phase 1 */}
+                  <div>
+                    <h4 className="font-bold text-white mb-2">Phase 1: Planning & Prototype Creation</h4>
+                    <div className="space-y-3 pl-4 border-l-2 border-orange-600/30">
+                      <p><strong className="text-white font-mono">/start</strong> - Initiates the workflow and asks for all the project files and context.</p>
+                      <p><strong className="text-white font-mono">/run format_request</strong> - Renders the request document in clean HTML so it's easier to read.</p>
+                      <p><strong className="text-white font-mono">/run identify_prototypes</strong> - Analyzes the request to find unique questions that can be used as templates and groups similar ones together.</p>
+                      <p><strong className="text-white font-mono">/run create_prototypes</strong> - Generates the actual XML code for the main "prototype" problems.</p>
+                    </div>
+                  </div>
+
+                  {/* Phase 2 */}
+                  <div>
+                    <h4 className="font-bold text-white mb-2">Phase 2: Finalization & Iteration</h4>
+                    <div className="space-y-3 pl-4 border-l-2 border-orange-600/30">
+                      <p><strong className="text-white font-mono">/run create_remaining_pts</strong> - After the prototypes are done, this automatically generates the XML for all the other similar problems.</p>
+                      <p><strong className="text-white font-mono">/add pt_ids</strong> - Lets me input the final ID numbers for the new PTs once they are in the system.</p>
+                      <p><strong className="text-white font-mono">/update_xml [QuestionID]</strong> - A command to completely replace the XML for a specific PT if I need to make a big change.</p>
+                      <p><strong className="text-white font-mono">/revise [QuestionID]</strong> - Lets me give the agent instructions to make smaller edits to a specific PT.</p>
+                    </div>
+                  </div>
+
+                  {/* Phase 3 */}
+                  <div>
+                    <h4 className="font-bold text-white mb-2">Utility & Status Commands</h4>
+                    <div className="space-y-3 pl-4 border-l-2 border-orange-600/30">
+                      <p><strong className="text-white font-mono">/get_xml [QuestionID]</strong> - Shows me the raw XML code for any PT in the log.</p>
+                      <p><strong className="text-white font-mono">/show_log</strong> - Displays a summary of the whole project status in a TSV format.</p>
+                      <p><strong className="text-white font-mono">/help</strong> - Shows this list of commands.</p>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
 
               {/* Back to Portfolio */}
               <div className="pt-8 border-t border-gray-700">

@@ -14,7 +14,7 @@ export default function PortfolioPage() {
   const projects = [
      {
       id: 17, 
-      title: "Automated Data Collation Script",
+      title: "Data Collation Python Script",
       description: "Excel, Python, Process Automation, Visual Studio Code, AI",
       image: "/images/python-data-collation.png", 
       categories: ["ai", "python","vscode", "processauto", "excel"], 
@@ -22,7 +22,7 @@ export default function PortfolioPage() {
     },
      {
       id: 16, 
-      title: "Worksheet-Answer Checker",
+      title: "Automated Worksheet-Answer Checker",
       description: "Python, LLM Evaluation, Process Automation, Visual Studio Code, AI",
       image: "/images/ws-answer checking.png", 
       categories: ["ai", "python","vscode", "processauto"],
@@ -30,7 +30,7 @@ export default function PortfolioPage() {
     },
      {
       id: 15, 
-      title: "AI Curation Agent CLI-based",
+      title: "PT Curation Agent CLI",
       description: "AI Agent Design, Prompt Engineering, Process Automation",
       image: "/images/pt curation.png", 
       categories: ["ai", "aiagent", "processauto", "promptengineering"],
@@ -38,7 +38,7 @@ export default function PortfolioPage() {
     },
      {
       id: 14, 
-      title: "AI-Powered Visualization Scripting", 
+      title: "Data Visualization Scripting", 
       description: "AI, Python, Prompt Engineering", 
       image: "/images/histogram curve.png", 
        categories: ["ai", "python", "promptengineering"],
@@ -46,15 +46,15 @@ export default function PortfolioPage() {
     },
        {
       id: 13,
-      title: "AI QA Agent CLI-based for Content Requests",
+      title: "PT Creation QA Specialist Agent CLI",
       description: "AI Agent Design, QA Automation, Prompt Engineering",
       image: "/images/qa pt request.png", 
       categories: ["ai","aiagent", "processauto", "promptengineering"],
       link: "/projects/ai-qa-agent-requests",
     },
-        {
+            {
       id: 12,
-      title: "AI QA Agent CLI based for Content Alignment",
+      title: "Worksheet-PT Alignment QA Specialist Agent CLI",
       description: "AI Agent Design, QA Automation, Prompt Engineering",
       image: "/images/qa ws-pt alignment.png", 
       categories: ["ai","aiagent", "processauto", "promptengineering"],
@@ -62,15 +62,15 @@ export default function PortfolioPage() {
     },
       {
       id: 11, 
-      title: "AI PT Creator Agent CLI-based for Content Request",
+      title: "PT Creation Agent CLI",
       description: "AI agent, Automation, Prompt Engineering",
       image: "/images/pt request creation.png", 
       categories: ["ai","aiagent", "processauto", "promptengineering"],
       link: "/projects/ai-orchestrator-creation", 
     },
-       {
+      {
       id: 10, 
-      title: "AI PT Creator Agent CLI-based for Content Alignment",
+      title: "Worksheet-PT Alignment Agent CLI",
       description: "Prompt Engineering, AI Agent Design, Automation",
       image: "/images/ws-pt alignment creation.png", 
       categories: ["ai","aiagent", "processauto", "promptengineering"],
@@ -118,7 +118,7 @@ export default function PortfolioPage() {
     },
     {
       id: 1,
-      title: "Google Merch Shop Case Study",
+      title: "Driving E-commerce Insights with GA4",
       description: "Google Analytics (GA4)",
       image: "/images/google-merch-display-new.png",
       categories: ["ga4"],
@@ -126,7 +126,7 @@ export default function PortfolioPage() {
     },
     {
       id: 2,
-      title: "Gaming Industry Case Study",
+      title: "Uncovering Market Trends in the Gaming Industry",
       description: "SQL, OpenRefine, Tableau, Data Cleaning, Data Exploration, Data Visualization",
       image: "/images/game-console.png",
       categories: ["sql", "openrefine", "tableau", "datacleaning", "dataexp", "dataviz"],
@@ -142,7 +142,7 @@ export default function PortfolioPage() {
     },
     {
       id: 6,
-      title: "Data Vizzes with Tableau",
+      title: "Interactive Dashboards with Tableau",
       description: "Tableau, Data Visualization",
       image: "/images/tableau-display.png",
       categories: ["tableau", "dataviz"],

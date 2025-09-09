@@ -34,102 +34,43 @@ export default function InventoryForecastModel() {
           {/* Main Content */}
           <div className="lg:col-span-2 lg:order-1">
             <div className="prose prose-lg max-w-none">
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">Project Background:</h3>
+                         <div className="prose prose-lg max-w-none">
+                            <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Goal: Forecasting Next Month's Inventory</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  This project was created for a children's clothing company. However, since the actual data is
-                  confidential, the dataset used here is fictional.
+                  This project was for a children's clothing company. The main goal was to create an inventory forecast for **January 2025** by using the sales history from all of 2024. I used a fictional dataset for this public version since the real data is confidential.
                 </p>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  After analyzing sales trends and identifying lenient, moderate, and peak months, the objectives of
-                  this project were to:
-                </p>
+                <p className="text-gray-300 leading-relaxed font-bold mb-4">My objectives for this task were:</p>
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4 mb-8">
-                  <li>
-                    Determine the fast-moving, moderate-moving, and slow-moving dresses for 2024 accounting only the
-                    discounted price tier and webstore store type.
-                  </li>
-                  <li>
-                    Allocate an inventory forecast for each design using a weighted average metric for January 2025.
-                  </li>
+                  <li>To analyze the 2024 data to find out which dresses were the fast-moving, moderate-moving, and slow-moving items.</li>
+                  <li>To use that analysis to build a weighted average model that could accurately forecast the inventory needed for January 2025.</li>
                 </ul>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">Methodology:</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Process: How I Built the Model</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  I built the entire forecasting model in Excel. Here are the steps I took to get the final forecast:
+                </p>
                 <ul className="list-disc list-inside space-y-4 text-gray-300 ml-4">
                   <li>
-                    <strong className="text-white">Created a pivot table filtering for:</strong>
-                    <ul className="list-disc list-inside space-y-1 ml-6 mt-2">
-                      <li><strong className="text-white">Department:</strong> Mini Miss</li>
-                      <li><strong className="text-white">Store Location:</strong> Webstore</li>
-                      <li><strong className="text-white">Pricing Tier:</strong> Discounted</li>
-                      <li><strong className="text-white">Subclass Name:</strong> Dresses</li>
-                    </ul>
-                    <span className="block mt-2">The pivot values were set to the sum of quantity sales.</span>
-                  </li>
-                  <li>Sorted the results in descending order to highlight the top-moving products.</li>
-                  <li>
-                    <strong className="text-white">Used the 2024 sales history to calculate averages for different periods:</strong>
-                    <ul className="list-disc list-inside space-y-1 ml-6 mt-2">
-                      <li>Lenient months: January to May</li>
-                      <li>Moderate months: June to October</li>
-                      <li>Peak months: November to December</li>
-                    </ul>
+                    <strong className="text-white">First, I used a pivot table</strong> to filter the data down to exactly what I needed: only dresses from the "Mini Miss" department sold in the webstore at a discounted price.
                   </li>
                   <li>
-                    <strong className="text-white">Computed the weighted average to forecast January sales using the formula:</strong>
-                    <div className="bg-gray-800 p-4 rounded-lg mt-2 font-mono text-orange-400 text-sm">
-                      Weighted Average = (0.6 × Avg Lenient) + (0.3 × Avg Moderate) + (0.1 × Avg Peak)
-                    </div>
-                    <span className="block mt-2">As shown, I reduced the weight of peak months to 10% for a more accurate forecast.</span>
+                    <strong className="text-white">Then, I analyzed the sales history for 2024</strong> to find the average sales for different seasons, which I called lenient, moderate, and peak months.
                   </li>
                   <li>
-                    <strong className="text-white">Classified each design based on its weighted average:</strong>
-                    <ul className="list-disc list-inside space-y-1 ml-6 mt-2">
-                      <li>Fast-moving: Weighted average &gt; 10</li>
-                      <li>Slow-moving: Weighted average &lt; 4</li>
-                      <li>Moderate-moving: Everything in between</li>
-                    </ul>
+                    <strong className="text-white">I computed a weighted average</strong> for each dress. I gave more weight to the lenient months (60%) and less to the peak months (10%) because I wanted a more conservative and accurate forecast for January, which is a lenient month.
                   </li>
                   <li>
-                    <strong className="text-white">Applied a multiplier for the forecast:</strong>
-                    <ul className="list-disc list-inside space-y-1 ml-6 mt-2">
-                      <li>Fast-moving: ×1.2</li>
-                      <li>Moderate-moving: ×1</li>
-                      <li>Slow-moving: ×0.8</li>
-                    </ul>
+                    <strong className="text-white">Next, I classified each dress</strong> as fast, moderate, or slow-moving based on its weighted average score.
                   </li>
                   <li>
-                    <strong className="text-white">Final forecast formula:</strong>
-                    <div className="bg-gray-800 p-4 rounded-lg mt-2 font-mono text-orange-400 text-sm">
-                      Weighted Average × Multiplier
-                    </div>
+                    <strong className="text-white">Finally, I applied a simple multiplier</strong> to the weighted average. Fast-movers got a small boost (x1.2), while slow-movers were reduced (x0.8), to get the final forecast number for each dress.
                   </li>
                 </ul>
               </div>
-
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">Replenishment Planning Template:</h3>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  Beyond forecasting, I also created a comprehensive replenishment planning template that helps
-                  determine:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4 mb-6">
-                    <li>Required inventory to achieve target sell-through rates</li>
-                    <li>Current webstore inventory levels</li>
-                    <li>Replenishment needs from local warehouses and fashion houses</li>
-                    <li>Optimal allocation across different inventory sources</li>
-                </ul>
-                <div className="relative aspect-video rounded-lg overflow-hidden">
-                  <Image
-                    src="/images/replenishment-display.png"
-                    alt="Inventory Replenishment Planning Template"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+            </div>
 
               {/* Interactive Forecasting Template Embed */}
               <div className="mb-8">

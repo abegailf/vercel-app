@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, ExternalLink, Bot, GitBranch, ShieldCheck } from "lucide-react"
+import { ArrowLeft, ExternalLink, Bot, GitBranch, ShieldCheck, Github } from "lucide-react"
 
 export default function AiCurationAgent() {
   const promptSnippet = `You are also the 'PT Curator v1.0,' an expert AI assistant and meticulous state manager. Your sole purpose is to guide a human Problem Template (PT) Curator through the process of analyzing a worksheet, identifying gaps in an existing PT set, evaluating potential new PTs to fill those gaps, and generating a final, curated list of PTs...
@@ -34,7 +34,7 @@ You will operate based on a strict command system.
             <span>/</span>
             <span>AI Curation Agent</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">AI Curation Agent for Curriculum Development</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">PT Curation Agent for Worksheet-PT alignment</h1>
         </div>
       </section>
 
@@ -44,30 +44,34 @@ You will operate based on a strict command system.
           {/* Main Content */}
           <div className="lg:col-span-2 lg:order-1">
             <div className="prose prose-lg max-w-none">
+                          <div className="prose prose-lg max-w-none">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Curating the Perfect Problem Set</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Finding the Right Problems</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Building a set of interactive math problems for a specific curriculum topic is a complex curation task. It involves analyzing a target worksheet, identifying which concepts are already covered by our existing library of thousands of problems, and then finding the best *new* problems to fill any gaps.
+                  One of our big tasks is to create a set of interactive problems (PTs) that perfectly match a worksheet for a specific topic. It's a really challenging curation job. First, you have to check the worksheet against the PTs in the set to see what's a good match.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  This process requires not only a deep pedagogical understanding but also a systematic approach to avoid selecting redundant problems or missing key skills. I designed an AI agent to act as a co-pilot for our curriculum curators, bringing speed, consistency, and data-driven rigor to this workflow.
+                  For any question that doesn't have a match, you have to search our entire bank to find new ones that can fill the gap. It takes a lot of time, and it's easy to miss things or pick problems that are too similar. So, I thought, maybe I can make a system to make this easier for me.
                 </p>
               </div>
 
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: A Systematic Curation Agent</h3>
+             <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: An AI Agent for Curation</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  I developed the 'PT Curator,' a command-line-driven AI agent that manages the entire curation lifecycle. The agent begins by performing a "gap analysis," comparing a worksheet to our existing content library and identifying uncovered skills.
+                  I built the 'PT Curator,' which is an AI agent that I use through a command-line interface. It helps me manage the entire curation process from start to finish. I designed it to be very systematic.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Then, when presented with a batch of new "candidate" problems, the agent evaluates each one against the identified gaps, flags duplicates or variants, and provides a clear recommendation on which ones to select. The entire process is tracked in a persistent "Master Alignment Log," ensuring a transparent and well-documented curation process.
+                  It starts with a "gap analysis" to automatically compare the worksheet to our existing content and tells me exactly which skills are missing. Then, I can give it a new set of "candidate" PTs, and the agent evaluates them, finds duplicates, and gives me a clear recommendation on which ones I should select.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Of course, I still QA the AI's output to make the final decision, but the agent does the heavy lifting and has significantly reduced the time it takes to complete this task. Everything is tracked in a "Master Alignment Log" so I can see the whole process.
                 </p>
               </div>
               
               <div className="mb-8">
                 <div className="relative aspect-video rounded-lg overflow-hidden border border-gray-700">
                   <Image
-                    src="/images/pt curation.png" // Using a placeholder for now
+                    src="/images/pt curation.png"
                     alt="AI Curation Agent Concept Image"
                     fill
                     className="object-cover"
@@ -76,16 +80,18 @@ You will operate based on a strict command system.
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">Engineering a Discerning AI Mindset</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Commands I Created</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The agent's ability to make intelligent recommendations comes from a master prompt that defines its persona as a "pragmatic PT Curator." I engineered its internal prompt library to handle distinct phases of the workflow, from the initial high-level gap analysis to the detailed evaluation of candidate problems. This transforms a general-purpose LLM into a specialized tool for making informed, consistent, and efficient content curation decisions.
+                  The agent works using a few simple commands that I designed for the workflow:
                 </p>
-                <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 mt-6">
-                  <div className="p-4 text-xs font-mono text-gray-300 whitespace-pre-wrap">
-                    <code>{promptSnippet}</code>
-                  </div>
-                </div>
+                <ul className="list-disc list-inside space-y-3 text-gray-300 ml-4">
+                    <li><strong className="text-white">/start:</strong> This one just starts the process and loads all the files I need.</li>
+                    <li><strong className="text-white">/run gap_analysis:</strong> This is the main check. It does the comparison and tells me what skills are missing.</li>
+                    <li><strong className="text-white">/evaluate:</strong> I use this to give the agent a bunch of new PTs, and it gives me a report on which ones are the best fit.</li>
+                    <li><strong className="text-white">/organize_and_report:</strong> Once I've chosen the PTs, this command organizes them all and gives me the final, clean list.</li>
+                </ul>
               </div>
+            </div>
 
               {/* Back to Portfolio */}
               <div className="pt-8 border-t border-gray-700">
@@ -117,7 +123,19 @@ You will operate based on a strict command system.
                       CLI, Large Language Models (LLMs), JSON, TSV
                     </p>
                   </div>
-                  {/* You can add the GitHub link for the prompt here if you have one */}
+                   <div>
+                    <strong style={{ color: "#FB5530" }}>Project Link:</strong>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="mt-2 w-full bg-transparent"
+                      style={{ borderColor: "#FB5530", color: "#FB5530" }}
+                      onClick={() => window.open("https://github.com/abegailf/WS-AK-checking-practice", "_blank")}
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      View Code on GitHub
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>

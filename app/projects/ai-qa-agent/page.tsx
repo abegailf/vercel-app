@@ -34,7 +34,7 @@ You will operate based on a strict command system.
             <span>/</span>
             <span>AI QA Agent for Content Alignment</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">AI QA Agent for Content Alignment</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">Worksheet PT-Alignment QA Specialist Agent</h1>
         </div>
       </section>
 
@@ -44,23 +44,24 @@ You will operate based on a strict command system.
           {/* Main Content */}
           <div className="lg:col-span-2 lg:order-1">
             <div className="prose prose-lg max-w-none">
+                         <div className="prose prose-lg max-w-none">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Ensuring Quality at Scale</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: A Complex Peer QA Process</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  After creating new interactive math problems (PTs) to match a worksheet, the critical next step is quality assurance. We need to verify that the alignment is correct and that the newly created PTs are technically flawless, pedagogically sound, and free of errors.
+                  At Mathspace, we have a "Peer QA" process. For a subtopic, my colleague will do the worksheet-to-PT alignment, which means they check which worksheet questions are matched by the existing PTs in that subtopic. For any gaps, they create new PTs from scratch.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  This QA process involves comparing multiple data sources (the AI's initial match, a creator's assessment, a coworker's review) and performing dozens of checks on every new XML file. Doing this manually is not just time-consuming, but also susceptible to human error and inconsistency.
+                  My task is then to QA my colleague's work. I have to check if their alignment is correct and if the new PTs they created are high quality. This involves a lot of back-and-forth checking between the worksheet, the old PTs, the new PTs, and our notes in ClickUp. It's a very detailed process, and I wanted to build a tool to help me manage it all systematically.
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: A Collaborative AI QA Agent</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: An AI Agent for My QA Workflow</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  I designed and engineered an "AI QA Agent" to act as a systematic and tireless partner for our Quality Assurance specialists. It operates via a CLI, managing the entire validation workflow from start to finish. The agent's core function is to maintain a persistent "Master Alignment Log," a JSON object that serves as the single source of truth for the entire QA task.
+                  I created the 'Worksheet-PT Alignment Agent,' an AI assistant I use as a command line to guide me through the whole Peer QA task. It's a stateful system that keeps track of everything in a "Master Alignment Log," so I have a single source of truth for the entire review.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The agent synthesizes feedback from multiple sources, runs a battery of specialized checks on new content, and collates all findings into a structured, actionable report.
+                  Of course, I still have to check the output the AI gives and make the final call, but the agent does the heavy lifting of organizing everything and running the initial checks. It has really helped reduce the time it takes to do this task thoroughly.
                 </p>
               </div>
               
@@ -68,7 +69,7 @@ You will operate based on a strict command system.
                 <div className="relative aspect-video rounded-lg overflow-hidden border border-gray-700">
                   <Image
                     src="/images/qa ws-pt alignment.png"
-                    alt="AI QA Agent Concept Image"
+                    alt="AI QA Agent for Content Alignment Concept Image"
                     fill
                     className="object-cover"
                   />
@@ -76,16 +77,62 @@ You will operate based on a strict command system.
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">A Library of Specialized QA Prompts</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">How I Built It: A "Megaprompt" Design</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The agent is equipped with a comprehensive internal library of prompts, each designed to perform a specific QA task. This includes a master "Comprehensive Review" prompt that checks for everything from mathematical accuracy to pedagogical effectiveness, as well as a suite of micro-prompts that can be called individually to check for specific issues like forbidden words, hint structure, or localization errors.
+                  The way I made the agent smart was by creating a single, really big "megaprompt." This main prompt contains everything, its personality as a QA specialist, how it remembers things with the JSON log, and all the rules it has to follow.
                 </p>
-                <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 mt-6">
-                  <div className="p-4 text-xs font-mono text-gray-300 whitespace-pre-wrap">
-                    <code>{promptSnippet}</code>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Inside this megaprompt, I also built a library of smaller, specialized prompts. So when I give the agent a command like `/run qa comprehensive`, it knows to use the specific sub-prompt for that QA task. This is how it can do different, complex jobs like the initial alignment or quality checks on the new PTs.
+                </p>
+              </div>
+
+                           <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Command System I Designed</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  The agent is built around a command system that lets me control every step of the Peer QA process, from the initial analysis to the final report.
+                </p>
+                <div className="text-left text-sm text-gray-300 space-y-6">
+                  {/* Phase 1 */}
+                  <div>
+                    <h4 className="font-bold text-white mb-2">Phase 1: Alignment & Validation</h4>
+                    <div className="space-y-3 pl-4 border-l-2 border-orange-600/30 font-mono">
+                      <p><strong className="text-white">/start</strong> - Begins the process and asks me for all the project files and context.</p>
+                      <p><strong className="text-white">/run initial_alignment</strong> - The agent does the first pass of comparing the worksheet to the existing PTs.</p>
+                      <p><strong className="text-white">/run validate_with_clickup</strong> - Compares the AI's alignment with our notes in ClickUp.</p>
+                      <p><strong className="text-white">/add my_assessment</strong> - I provide my final review of the alignment.</p>
+                      <p><strong className="text-white">/add coworker_assessment</strong> - I also add my coworker's assessment to the log for comparison.</p>
+                      <p><strong className="text-white">/add newly_created_pts</strong> - I log the new PTs that my colleague created for the gaps.</p>
+                    </div>
+                  </div>
+
+                  {/* Phase 2 */}
+                  <div>
+                    <h4 className="font-bold text-white mb-2">Phase 2: New PT Quality Assurance</h4>
+                    <div className="space-y-3 pl-4 border-l-2 border-orange-600/30 font-mono">
+                      <p><strong className="text-white">/run qa [process_name]</strong> - This is the main QA command. I can tell it to run a `comprehensive` review, or specific checks like:</p>
+                      <ul className="list-disc list-inside pl-4 text-xs mt-2 space-y-1">
+                        <li>skill_measurement</li>
+                        <li>hint_structure</li>
+                        <li>math_accuracy</li>
+                        <li>localization</li>
+                        <li>and many more...</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Phase 3 */}
+                  <div>
+                    <h4 className="font-bold text-white mb-2">Phase 3: Final Reporting</h4>
+                    <div className="space-y-3 pl-4 border-l-2 border-orange-600/30 font-mono">
+                      <p><strong className="text-white">/add_my_feedback [ID]</strong> - Lets me add my own manual comments to the log for a specific PT.</p>
+                      <p><strong className="text-white">/show_feedback_table</strong> - This displays the entire log as a clean TSV table so I can see the status of everything.</p>
+                      <p><strong className="text-white">/generate_report</strong> - After all my checks are done, this command takes all the notes from the log and creates the final, synthesized report to send to my coworker.</p>
+                      <p><strong className="text-white">/help</strong> - Shows this full list of commands.</p>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
 
               {/* Back to Portfolio */}
               <div className="pt-8 border-t border-gray-700">

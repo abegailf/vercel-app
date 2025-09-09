@@ -34,25 +34,26 @@ export default function InventoryReplenishmentTemplate() {
           {/* Main Content */}
           <div className="lg:col-span-2 lg:order-1">
             <div className="prose prose-lg max-w-none">
+                         <div className="prose prose-lg max-w-none">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: A Manual Process</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: A Repetitive Excel Task</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  For a children's clothing company, determining how to restock the online store was a time-consuming, manual task. After forecasting demand, my colleague had to manually check inventory levels across the webstore, a local warehouse, and various physical stores to figure out replenishment needs.
+                  For a children's clothing company, my colleague was in charge of creating the inventory replenishment report. She was already using Excel, but the process was very manual. Every time, she would have to re-filter the data, re-type formulas, and manually figure out how to source the stock we needed.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The process involved a lot of filtering and manual calculations. For example, if a dress needed 8 more units, she would have to check if the warehouse had enough. If not, she'd have to calculate the remaining need and then manually check stock at physical stores. I saw an opportunity to automate this entire decision-making process.
+                  I thought to myself, since she's already in Excel, why not create a template for this? A tool where she could just paste in the latest inventory data and let the template do all the calculations for her.
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: An Automated Template</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: A Smart, Automated Template</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  I developed a smart Excel template that transforms this multi-step process into a simple copy-and-paste task. By leveraging a series of nested IF and IFS formulas, the template automates the entire replenishment logic.
+                  I developed a smart Excel template that completely automates the replenishment logic. I used a series of nested IF and IFS formulas to handle all the decision-making that my colleague was doing by hand.
                 </p>
-                <p className="text-gray-300 leading-relaxed font-bold mb-4">The new workflow is simple:</p>
+                <p className="text-gray-300 leading-relaxed font-bold mb-4">The new workflow is much faster:</p>
                 <ul className="list-decimal list-inside space-y-2 text-gray-300 ml-4 mb-8">
-                  <li>Paste in the latest inventory data: design code, forecast, and current stock levels for the webstore, warehouse, and physical stores.</li>
-                  <li>The template instantly calculates everything else.</li>
+                  <li>Use VLOOKUP or just copy-paste the latest data: design codes, forecasts, and current inventory from the webstore, warehouse, and physical stores.</li>
+                  <li>The template instantly does the rest.</li>
                 </ul>
               </div>
 
@@ -60,16 +61,16 @@ export default function InventoryReplenishmentTemplate() {
                 <h3 className="text-2xl font-bold mb-4 text-orange-600">How It Works: The Automated Logic</h3>
                 <ul className="list-disc list-inside space-y-4 text-gray-300 ml-4">
                     <li>
-                      <strong className="text-white">Calculates Replenishment Need:</strong> Automatically determines if an item is below its forecasted demand and calculates the exact quantity needed.
+                      <strong className="text-white">Calculates Replenishment Need:</strong> It automatically checks if an item is below its forecast and calculates exactly how many units we need.
                     </li>
                     <li>
-                      <strong className="text-white">Prioritizes Sourcing:</strong> The formula first checks the local warehouse to fulfill the need. It automatically caps the quantity to what's available.
+                      <strong className="text-white">Prioritizes Sourcing:</strong> The formula is smart. It first tries to get the stock from the local warehouse and automatically takes only what's needed, even if more is available.
                     </li>
                     <li>
-                      <strong className="text-white">Cascades to Secondary Sources:</strong> If the warehouse can't meet the full demand, the template automatically calculates the remaining shortfall and determines if it can be fulfilled by pulling stock from physical stores.
+                      <strong className="text-white">Finds from Other Stores:</strong> If the warehouse doesn't have enough, the template automatically calculates the remaining amount and figures out if we can pull it from our physical stores.
                     </li>
                     <li>
-                      <strong className="text-white">Provides a Clear Report:</strong> The final output is a clean, actionable report showing exactly how many units to pull from each location for every single design.
+                      <strong className="text-white">Gives a Clear Report:</strong> The end result is a clean report that tells you exactly how many units to get from each location for every single design. No more manual filtering or calculations.
                     </li>
                 </ul>
               </div>
@@ -154,6 +155,7 @@ export default function InventoryReplenishmentTemplate() {
             </Card>
           </div>
         </div>
+      </div>
       </section>
     </>
   )

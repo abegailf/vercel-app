@@ -43,20 +43,24 @@ CRITICAL: Comments within the <mathyon-s> block MUST start with a hash symbol (#
           {/* Main Content */}
           <div className="lg:col-span-2 lg:order-1">
             <div className="prose prose-lg max-w-none">
+                        <div className="prose prose-lg max-w-none">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: A Complex, Rule-Based Workflow</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Writing Problem Templates is Hard</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  At Mathspace, creating new "Problem Templates" (interactive math questions) is a highly technical process. It involves writing randomization logic in a custom scripting language called MathyonS and structuring the final output in XML. The language has hundreds of specific rules, from variable naming conventions to mandatory syntax for conditional logic.
+                  At Mathspace, creating new "Problem Templates" (or PTs) is a very technical job. You have to write code in our special scripting language, MathyonS, and then structure everything in XML. There are hundreds of very specific rules to remember, from how to name variables to the only way you're allowed to write if/else logic.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Manually writing this code is time-consuming and requires deep domain knowledge, creating a bottleneck in content creation. I saw an opportunity to leverage generative AI to act as a co-pilot for our content creators, dramatically accelerating this workflow.
+                  Writing this code by hand takes a lot of time and you really have to know the system inside and out. I saw this as a bottleneck for us, so I thought it would be a great chance to use generative AI to help make the process faster.
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: A Custom AI Web Application</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: An AI Web App Built in an Afternoon</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  I developed the "Problem Template Creator AI," a web application that provides a user-friendly interface for interacting with a highly-tuned Large Language Model (LLM). Instead of needing to remember hundreds of rules, a content creator can now provide a simple math question and the app generates the complex, compliant MathyonS and XML code.
+                  During one of our "AI Lab Hour" sessions, I decided to explore on my own. It was my first time trying Google AI Studio to build a web app, and I created the "Problem Template Creator AI." It's a simple tool with a user-friendly interface that acts as a co-pilot for creating PTs.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Instead of trying to remember all the rules, a content creator can just input a simple math question, and the app uses a highly-tuned AI to generate all the complex MathyonS and XML code needed. After I built it, I shared it with the team on our AI Slack channel.
                 </p>
               </div>
               
@@ -72,16 +76,18 @@ CRITICAL: Comments within the <mathyon-s> block MUST start with a hash symbol (#
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Core: Advanced Prompt Engineering</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">Key Features I Built In</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The heart of this application is the meticulously crafted system prompt. I engineered a detailed, multi-page prompt that essentially "teaches" the AI how to be an expert Mathspace developer. It includes all the critical rules, conventions, and examples of correct syntax, turning a general-purpose model like Google's Gemini into a specialized code-generation engine.
+                  The app's intelligence comes from a very detailed "megaprompt" that I engineered to teach the AI how to be a Mathspace developer. It also has some cool features I built in:
                 </p>
-                <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700">
-                  <div className="p-4 text-xs font-mono text-gray-300 whitespace-pre-wrap">
-                    <code>{promptSnippet}</code>
-                  </div>
-                </div>
+                <ul className="list-disc list-inside space-y-3 text-gray-300 ml-4">
+                    <li><strong className="text-white">File Differencing:</strong> It has a built-in "diff viewer" so you can easily see the changes between the AI's suggestion and your original code.</li>
+                    <li><strong className="text-white">Localization Rules:</strong> It automatically applies our localization rules, so it knows to use "metres" for Australia and "meters" for the US, for example.</li>
+                    <li><strong className="text-white">Copy Functionality:</strong> Simple one-click buttons to copy the generated MathyonS or XML code.</li>
+                    <li><strong className="text-white">Theme Toggle:</strong> I even added a light/dark mode theme toggle.</li>
+                </ul>
               </div>
+            </div>
 
               {/* Back to Portfolio */}
               <div className="pt-8 border-t border-gray-700">

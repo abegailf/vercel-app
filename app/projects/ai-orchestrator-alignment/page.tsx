@@ -36,7 +36,7 @@ You will operate based on a strict command system. I will give you a command, an
             <span>/</span>
             <span>AI Orchestrator for Content Alignment</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">AI Agent for Content Alignment</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">Worksheet-PT Alignment Agent</h1>
         </div>
       </section>
 
@@ -46,20 +46,24 @@ You will operate based on a strict command system. I will give you a command, an
           {/* Main Content */}
           <div className="lg:col-span-2 lg:order-1">
             <div className="prose prose-lg max-w-none">
+                         <div className="prose prose-lg max-w-none">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Ensuring Curriculum Coverage</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Filling in the Gaps</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  At Mathspace, a key challenge is ensuring that our library of interactive "Problem Templates" (PTs) perfectly covers all the questions in a traditional educational worksheet. Manually comparing a worksheet to hundreds of existing PTs to find content gaps is slow, subjective, and prone to error.
+                  For any given subtopic, my task is to check our worksheets and make sure we have an interactive Problem Template (PT) for every single question. This is our "worksheet-pt alignment" process. I have to check the existing PTs in the subtopic to see which questions they match.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Once a gap is found, creating a new, compliant PT requires a developer to follow hundreds of strict syntax and pedagogical rules. This entire process was a significant bottleneck. I decided to design an AI-powered system to automate it from end to end.
+                  For all the unmatched questions, we need to create new PTs from scratch to fill in the gaps. This whole process, from finding the gaps to creating the new PTs, involves a lot of steps and can be very slow. I wanted to build a tool to make this entire workflow easier and faster for me to manage.
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: An AI Orchestrator Agent</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: An AI Agent to Manage the Workflow</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  I engineered the 'WS-PT Creation Orchestrator,' a sophisticated AI agent that manages the entire workflow through a command-line interface. It's not just a single prompt; it's a stateful system with an internal library of specialized sub-prompts, a persistent JSON log to track progress, and a strict command protocol to guide the user.
+                  I created the 'WS-PT Creation Agent,' an AI assistant that I use as a command line to guide me through the whole task. It's a stateful system that keeps track of everything in a "Master Alignment Log," so I always know the status of each question.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  I still have to check the output the AI gives, of course, but the agent does the heavy lifting and significantly reduces the time it takes to do this task. It helps me find the gaps, plan the creation of new PTs by identifying "prototypes" first, and then it helps generate the final XML code.
                 </p>
               </div>
               
@@ -67,35 +71,66 @@ You will operate based on a strict command system. I will give you a command, an
                 <div className="relative aspect-video rounded-lg overflow-hidden border border-gray-700">
                   <Image
                     src="/images/ws-pt alignment creation.png"
-                    alt="AI Orchestrator Concept Image"
+                    alt="AI Agent for Content Alignment Concept Image"
                     fill
                     className="object-cover"
                   />
                 </div>
               </div>
-
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">System Architecture & Prompt Engineering</h3>
+              
+                             <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">How I Built It: A "Megaprompt" Design</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The orchestrator's intelligence comes from a meticulously crafted master prompt that defines its entire operational logic, including its state management, command system, and a library of task-specific prompts for each phase of the workflow:
+                  The way I made the agent smart was by creating a single, really big "megaprompt." This main prompt contains everything, its personality, how it remembers things with the JSON log, and all the rules it has to follow.
                 </p>
-                <ul className="list-disc list-inside space-y-4 text-gray-300 ml-4">
-                  <li>
-                    <strong className="text-white">Initial Alignment:</strong> A sub-prompt analyzes the worksheet and existing XML files to perform a gap analysis, logging every match and mismatch.
-                  </li>
-                  <li>
-                    <strong className="text-white">Prototype Planning:</strong> The system then identifies structurally unique problems among the gaps and creates a plan to build "prototype" templates first.
-                  </li>
-                  <li>
-                    <strong className="text-white">Automated Generation:</strong> Finally, the orchestrator uses the generated prototypes as a template to automatically create all remaining PTs, ensuring consistency and adherence to all rules.
-                  </li>
-                </ul>
-                <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 mt-6">
-                  <div className="p-4 text-xs font-mono text-gray-300 whitespace-pre-wrap">
-                    <code>{promptSnippet}</code>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Inside this megaprompt, I also built a library of smaller, specialized prompts. So when I give the agent a command like `/run initial_alignment`, it knows to use the specific sub-prompt for that task. This is how it can do different, complex jobs like gap analysis or creating XML code.
+                </p>
+              </div>
+
+                            <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Command System I Designed</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  The agent follows a strict command system that I designed to manage each phase of the process, from analysis to final creation.
+                </p>
+                <div className="text-left text-sm text-gray-300 space-y-6">
+                  {/* Phase 1 */}
+                  <div>
+                    <h4 className="font-bold text-white mb-2">Phase 1: Alignment & Gap Identification</h4>
+                    <div className="space-y-3 pl-4 border-l-2 border-orange-600/30 font-mono">
+                      <p><strong className="text-white">/start</strong> - Begins the process and prompts me for the project files.</p>
+                      <p><strong className="text-white">/run initial_alignment</strong> - The agent compares the worksheet to existing PTs to find the first gaps.</p>
+                      <p><strong className="text-white">/run validate_with_clickup</strong> - Compares the AI's findings with our notes in ClickUp.</p>
+                      <p><strong className="text-white">/add my_assessment</strong> - After reviewing, I provide my final list of what's unmatched.</p>
+                      <p><strong className="text-white">/run format_unmatched</strong> - Displays the unmatched questions in a clean HTML format.</p>
+                    </div>
+                  </div>
+
+                  {/* Phase 2 */}
+                  <div>
+                    <h4 className="font-bold text-white mb-2">Phase 2: PT Creation for Gaps</h4>
+                    <div className="space-y-3 pl-4 border-l-2 border-orange-600/30 font-mono">
+                      <p><strong className="text-white">/run identify_prototypes</strong> - Analyzes the unmatched questions and suggests a smart plan for building them by grouping similar problems.</p>
+                      <p><strong className="text-white">/run create_prototypes</strong> - Generates the XML code for the main "prototype" PTs.</p>
+                      <p><strong className="text-white">/add pt_ids</strong> - Lets me input the final ID numbers for the new PTs once they are in the system.</p>
+                      <p><strong className="text-white">/run create_remaining_pts</strong> - Automatically creates the XML for all the other similar PTs based on the prototypes.</p>
+                    </div>
+                  </div>
+
+                  {/* Phase 3 */}
+                  <div>
+                    <h4 className="font-bold text-white mb-2">Phase 3: Utility & Finalization</h4>
+                    <div className="space-y-3 pl-4 border-l-2 border-orange-600/30 font-mono">
+                      <p><strong className="text-white">/update_xml [ID]</strong> - Lets me completely replace the XML for a specific PT.</p>
+                      <p><strong className="text-white">/revise [ID]</strong> - Lets me give the agent instructions to make smaller edits to a specific XML.</p>
+                      <p><strong className="text-white">/get_xml [ID]</strong> - Shows me the raw XML code for any PT in the log.</p>
+                      <p><strong className="text-white">/show_log</strong> - Displays a simple summary of the project's status.</p>
+                      <p><strong className="text-white">/help</strong> - Shows this full list of commands.</p>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
 
               {/* Back to Portfolio */}
               <div className="pt-8 border-t border-gray-700">

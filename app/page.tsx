@@ -80,15 +80,15 @@ const certifications = [
 const allProjects = [
   {
       id: 17, 
-      title: "Automated Data Collation Script",
+      title: "Data Collation Python Script",
       description: "Excel, Python, Process Automation, Visual Studio Code, AI",
       image: "/images/python-data-collation.png", 
       categories: ["ai", "python","vscode", "processauto", "excel"], 
       link: "/projects/python-data-collation", 
     },
-     {
+      {
       id: 16, 
-      title: "Worksheet-Answer Checker",
+      title: "Automated Worksheet-Answer Checker",
       description: "Python, LLM Evaluation, Process Automation, Visual Studio Code, AI",
       image: "/images/ws-answer checking.png", 
       categories: ["ai", "python","vscode", "processauto"],
@@ -96,7 +96,7 @@ const allProjects = [
     },
      {
       id: 14, 
-      title: "AI-Powered Visualization Scripting", 
+      title: "Data Visualization Scripting",  
       description: "Python, Prompt Engineering, AI", 
       image: "/images/histogram curve.png", 
        categories: ["ai", "python", "promptengineering"],
@@ -104,7 +104,7 @@ const allProjects = [
     },
         {
       id: 12,
-      title: "AI QA Agent CLI based for Content Alignment",
+      title: "Worksheet-PT Alignment QA Specialist Agent CLI",
       description: "AI Agent Design, QA Automation, Prompt Engineering",
       image: "/images/qa ws-pt alignment.png", 
       categories: ["ai","aiagent", "processauto", "promptengineering"],
@@ -112,7 +112,7 @@ const allProjects = [
     },
        {
       id: 10, 
-      title: "AI PT Creator Agent CLI-based for Content Alignment",
+      title: "Worksheet-PT Alignment Agent CLI",
       description: "Prompt Engineering, AI Agent Design, Automation",
       image: "/images/ws-pt alignment creation.png", 
       categories: ["ai","aiagent", "processauto", "promptengineering"],
@@ -152,7 +152,7 @@ const allProjects = [
     },
     {
       id: 2,
-      title: "Gaming Industry Case Study",
+      title: "Uncovering Market Trends in the Gaming Industry",
       description: "SQL, OpenRefine, Tableau, Data Cleaning, Data Exploration, Data Visualization",
       image: "/images/game-console.png",
       categories: ["sql", "openrefine", "tableau", "datacleaning", "dataexp", "dataviz"],
@@ -168,7 +168,7 @@ const allProjects = [
     },
     {
       id: 6,
-      title: "Data Vizzes with Tableau",
+      title: "Interactive Dashboards with Tableau",
       description: "Tableau, Data Visualization",
       image: "/images/tableau-display.png",
       categories: ["tableau", "dataviz"],

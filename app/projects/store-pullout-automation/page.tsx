@@ -51,36 +51,41 @@ End Sub`;
           {/* Main Content */}
           <div className="lg:col-span-2 lg:order-1">
             <div className="prose prose-lg max-w-none">
+                         <div className="prose prose-lg max-w-none">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: A Full Day of Manual Work</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: A Very Long Manual Task</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  At a children's clothing company, the final step after inventory forecasting was creating a "pullout" report to source stock from 12+ physical stores. This was a painstaking manual process that, during peak seasons, could take a single employee a full day to complete.
+                  After we have the replenishment report, the next step is to create a "store pullout" report. This is a long list of items we need to pull from our physical stores to restock the online store.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The logic was complex: for thousands of products, my colleague had to manually identify which stores had the highest inventory, pull from them one by one until the required quantity was met, and keep track of it all by highlighting cells. I knew there had to be a better way.
+                  My colleague was doing this in Excel, but it was a very manual process. For thousands of rows of items, she had to figure out which stores to pull from. The rule is to get from the stores with the highest inventory first, and to try to distribute the pullout so we don't empty out just one store. She told me that during peak season, this task would sometimes take her half a day or even a whole day.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Her method was to highlight cells in different colors to mark how many items to pull, and then later replace the values. I saw how repetitive it was and thought, "This can definitely be automated."
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: Automation with VBA</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: A One-Click VBA Script</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Recognizing the opportunity to save hundreds of hours of manual labor, I developed an Excel VBA script to automate the entire process. Working in collaboration with AI as a development partner, I engineered a macro that transforms the full-day task into a single click.
+                  To solve this, I decided to create an Excel VBA script. I vibe-coded it with AI, guiding it to build a macro that could handle the whole complex logic.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The script intelligently sorts all physical stores by their inventory levels for each product, then automatically pulls the required quantities in a round-robin fashion from the highest-stocked stores first until the demand is met. The final output is a perfectly formatted, error-free pullout report, generated in less than 10 minutes.
+                  The script I wrote automates everything. It sorts all the stores by inventory for each item and then automatically assigns the pullout quantities, starting with the highest-stocked stores and distributing the pullout evenly. The final result is a perfect, error-free report that is generated in just a few minutes. What used to take a full day is now just a single click.
                 </p>
               </div>
 
               <div className="mb-8">
                 <h3 className="text-2xl font-bold mb-4 text-orange-600">The VBA Script</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Below is a snippet of the VBA code that powers the automation. It handles sheet selection, data sorting, and the core pullout logic.
+                  Here is a part of the VBA code I wrote that handles the data sorting and the main pullout logic.
                 </p>
-                <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700">
+                <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 mt-6">
                   <div className="p-4 text-xs font-mono text-gray-300 whitespace-pre-wrap">
                     <code>{vbaCode}</code>
                   </div>
                 </div>
+              </div>
               </div>
 
               {/* Back to Portfolio */}

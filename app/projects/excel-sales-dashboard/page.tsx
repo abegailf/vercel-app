@@ -190,51 +190,53 @@ export default function ExcelSalesDashboard() {
             {/* Main Content */}
             <div className="lg:col-span-2 lg:order-1">
               <div className="prose prose-lg max-w-none">
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-4" style={{ color: "#FB5530" }}>
-                    Project Background:
-                  </h3>
-                  <p className="leading-relaxed mb-6" style={{ color: "#A59385" }}>
-                    This is a simple analysis I created for a children's fashion company. Since the actual data is
-                    confidential, the dataset used here is fictional. The objective was to analyze sales trends for:
-                  </p>
+                           <div className="prose prose-lg max-w-none">
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Goal: Understanding Sales Trends</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  I created this simple analysis for a children's clothing company to help them see their sales trends more clearly. Because the real data is confidential, I used a fictional dataset for this version.
+                </p>
+                <p className="text-gray-300 leading-relaxed font-bold mb-4">The main objective was to analyze the 2024 sales for a specific category:</p>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4 mb-8">
+                  <li>Dresses from the "Mini Miss" department.</li>
+                  <li>That were sold at a discounted price.</li>
+                  <li>And only from the online webstore.</li>
+                </ul>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                    My goal was to find out which months were lenient, moderate, and peak sales periods for these specific items.
+                </p>
+              </div>
 
-                  <ul className="list-disc list-inside space-y-2 ml-4 mb-6" style={{ color: "#A59385" }}>
-                    <li>
-                      <strong className="text-white">Department:</strong> Mini Miss
-                    </li>
-                    <li>
-                      <strong className="text-white">Pricing Tier:</strong> Discounted
-                    </li>
-                    <li>
-                      <strong className="text-white">Subclass:</strong> Dress
-                    </li>
-                    <li>
-                      <strong className="text-white">Store Type:</strong> Webstore
-                    </li>
-                  </ul>
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: A Simple and Clear Dashboard</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  To present my findings, I built a simple dashboard in Excel. Instead of just showing a table of numbers, the dashboard uses charts and graphs to make the trends easy to see at a glance.
+                </p>
+                <p className="text-gray-300 leading-relaxed font-bold mb-4">From the dashboard, we could easily see the key findings:</p>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                  <li>
+                    <strong className="text-white">Lenient Months:</strong> January to May had the lowest sales.
+                  </li>
+                  <li>
+                    <strong className="text-white">Moderate Months:</strong> June to October showed average sales.
+                  </li>
+                  <li>
+                    <strong className="text-white">Peak Months:</strong> November and December were the highest-selling months, likely because of the holidays.
+                  </li>
+                </ul>
+              </div>
 
-                  <p className="leading-relaxed mb-8" style={{ color: "#A59385" }}>
-                    The goal was to identify the lenient, moderate, and peak months for 2024.
-                  </p>
+              <div className="mb-8">
+                <div className="relative aspect-video rounded-lg overflow-hidden border border-gray-700">
+                  <Image
+                    src="/images/kiddie-vogue-dashboard.png"
+                    alt="Excel Sales Dashboard Screenshot"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
-
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-4" style={{ color: "#FB5530" }}>
-                    Key Findings:
-                  </h3>
-                  <ul className="list-disc list-inside space-y-2 ml-4" style={{ color: "#A59385" }}>
-                    <li>
-                      <strong className="text-white">Lenient months:</strong> January to May
-                    </li>
-                    <li>
-                      <strong className="text-white">Moderate months:</strong> June to October
-                    </li>
-                    <li>
-                      <strong className="text-white">Peak months:</strong> November and December
-                    </li>
-                  </ul>
-                </div>
+              </div>
+            </div>
 
                 <div className="mb-8">
                   <Button
@@ -260,18 +262,6 @@ export default function ExcelSalesDashboard() {
                       frameBorder="0"
                       scrolling="no"
                       title="Excel Sales Dashboard"
-                    />
-                  </div>
-                </div>
-
-                {/* Project Image */}
-                <div className="mb-8">
-                  <div className="relative aspect-video rounded-lg overflow-hidden">
-                    <Image
-                      src="/images/kiddie-vogue-dashboard.png"
-                      alt="Excel Sales Dashboard Screenshot"
-                      fill
-                      className="object-cover"
                     />
                   </div>
                 </div>

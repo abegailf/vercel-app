@@ -56,7 +56,7 @@ if __name__ == "__main__":
             <span>/</span>
             <span>AI-Powered Answer Checker (R&D)</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">AI-Powered Answer Checker (R&D)</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">Automated Worksheet-Answer Checkerr (R&D)</h1>
         </div>
       </section>
 
@@ -66,31 +66,35 @@ if __name__ == "__main__":
           {/* Main Content */}
           <div className="lg:col-span-2 lg:order-1">
             <div className="prose prose-lg max-w-none">
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Automating Quality Assurance</h3>
+                            <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Can AI Check Math Answers?</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Manually checking every answer in a mathematics worksheet for accuracy is a critical but incredibly time-consuming part of the quality assurance process. My colleague initiated a discussion on our AI-sharing Slack channel to explore whether we could automate this. The goal was to build a tool that could parse a worksheet, solve each question, and compare its result to the provided answer.
+                  Our curriculum head, started a discussion in our AI-sharing Slack channel. The idea was to see if we could automate the process of checking answers in our math worksheets. It's a really important QA step, but it takes a lot of time to do manually.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  She had already been running a Python script, but the results were mixed. The AI was good, but it was also making simple mistakes, giving a lot of "false positives." The question for the team was: can we make this process more accurate?
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Contribution: Prototyping a Python Solution</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Contribution: Exploring on My Own</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  I joined the effort and took on the task of building a proof-of-concept. I developed a Python script that served as the backbone of this R&D project. The script was designed to:
+                  For our "AI lab hour," I decided to do some exploring on my own. I took on the task of building my own version of the script to see if I could get better results.
                 </p>
+                <p className="text-gray-300 leading-relaxed font-bold mb-4">My Python script was built to:</p>
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4 mb-8">
-                    <li>Parse complex worksheet files (JSX/XML) to extract individual questions and their provided answers.</li>
-                    <li>Normalize the extracted data into a clean, consistent format.</li>
-                    <li>Construct a detailed prompt template to instruct an LLM to act as an expert math teacher.</li>
-                    <li>Systematically send each problem to various LLM APIs (including OpenAI and Gemini) for analysis.</li>
-                    <li>Parse the structured JSON response from the AI and compile all findings into a final CSV report.</li>
+                    <li>Parse our complex worksheet files to pull out each question and its answer.</li>
+                    <li>Clean up and normalize the answers so the AI could understand them easily.</li>
+                    <li>Use a detailed prompt to tell the AI to act like an expert math teacher.</li>
+                    <li>Send each problem to different AI models (like OpenAI and Gemini) to test and compare them.</li>
+                    <li>Collect all the JSON responses from the AI and organize them into a final CSV report for analysis.</li>
                 </ul>
               </div>
               
               <div className="mb-8">
                 <div className="relative aspect-video rounded-lg overflow-hidden border border-gray-700">
                   <Image
-                    src="/images/ws-answer checking.png" // You'll need to add a screenshot of the Slack thread here
+                    src="/images/ws-answer checking.png"
                     alt="Slack collaboration for the AI Answer Checker project"
                     fill
                     className="object-contain"
@@ -99,9 +103,12 @@ if __name__ == "__main__":
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">Outcome: A Data-Driven Decision</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">Outcome: A Valuable Finding</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Through rigorous testing and collaboration with the team, we analyzed the AI's performance. While the script worked perfectly, we discovered that the current generation of LLMs produced too many false positives to be reliable for production use. This was a valuable finding in itself. The project was a successful R&D effort that provided critical insights into the limitations of current AI models for this specific task, saving the company from investing further in a currently unviable solution.
+                  After running my tests and sharing the results with the team, we confirmed the initial findings. My script worked well, but the AI models were still not consistent enough for this specific task—they were still flagging correct answers as wrong.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Even though it wasn't implemented, this was a successful R&D project. We learned a lot about the current limits of AI for math validation and made a data-driven decision not to spend more time on it for now. It was a great example of our team collaborating to explore new tech.
                 </p>
                 <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 mt-6">
                   <div className="p-4 text-xs font-mono text-gray-300 whitespace-pre-wrap">

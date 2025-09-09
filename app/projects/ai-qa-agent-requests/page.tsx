@@ -32,7 +32,7 @@ Your most critical function is to create, maintain, and update a persistent "Mas
             <span>/</span>
             <span>AI QA Agent for New Content</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">AI QA Agent for New Content Requests</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">PT Creation QA Specialist Agent CLI-based</h1>
         </div>
       </section>
 
@@ -42,30 +42,31 @@ Your most critical function is to create, maintain, and update a persistent "Mas
           {/* Main Content */}
           <div className="lg:col-span-2 lg:order-1">
             <div className="prose prose-lg max-w-none">
+                          <div className="prose prose-lg max-w-none">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Standardizing Quality Assurance</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Challenge: Making Peer QA Consistent</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  When new interactive math problems (PTs) are created based on a request document, they must undergo a rigorous Quality Assurance (QA) process. This involves checking for dozens of potential issues, from mathematical accuracy and pedagogical soundness to strict adherence to localization rules and XML syntax conventions.
+                  At Mathspace, when a set of new Problem Templates (PTs) is created, it goes through a Peer QA process. My task is to be the quality checker for the PTs my colleague builds. This means I have to check for dozens of things, from math accuracy and correct XML syntax to making sure the language is right for our students in Australia or the US.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Performing these checks manually is not only tedious but also risks inconsistency. Different QA specialists might focus on different areas, leading to a variable standard of quality. I saw a need for a system that could standardize this process and act as an infallible QA partner.
+                  Doing all these checks manually is a lot of work and can be inconsistent. Sometimes I might focus more on one area than another. I wanted to build a system to help me standardize my own QA workflow and make sure I never miss a single detail.
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: A Systematic AI QA Agent</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Solution: An AI Agent for My QA Workflow</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  I designed the 'QA Workflow Orchestrator,' a command-line-driven AI agent that guides a human QA specialist through a systematic review process. The agent's core is a persistent "Master Feedback Log," a JSON object that meticulously tracks every piece of AI-generated and manual feedback for each problem template under review.
+                  I built the 'QA Workflow Agent,' a tool I use as a command line to help me review a set of PTs. It acts as my personal QA assistant, managing the whole process from start to finish. I still have to check the output the AI gives to make the final call, of course, but this agent does the heavy lifting and has reduced a lot of time in the process.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The specialist uses a series of commands to instruct the agent to run specific checks—from a high-level comprehensive review to granular checks on hint structure, forbidden words, or randomization logic. The agent executes these tasks, displays the results, and automatically collates all findings into the master log, culminating in a final, perfectly formatted report.
+                  The most important part is the "Master Feedback Log," which is a JSON file that keeps track of all the feedback for every PT I'm checking. The agent uses a series of commands to run checks, and it automatically organizes all the findings into the log. In the end, it generates a final, clean report for me that I can share.
                 </p>
               </div>
               
               <div className="mb-8">
                 <div className="relative aspect-video rounded-lg overflow-hidden border border-gray-700">
                   <Image
-                    src="/images/qa pt request.png" 
+                    src="/images/qa pt request.png"
                     alt="AI QA Agent Concept Image"
                     fill
                     className="object-cover"
@@ -73,17 +74,70 @@ Your most critical function is to create, maintain, and update a persistent "Mas
                 </div>
               </div>
 
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">Prompt Engineering for Precision and Persona</h3>
+               <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">How I Built It: A "Megaprompt" Design</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  The agent's effectiveness is rooted in its extensive internal library of specialized prompts. I engineered a master "Comprehensive Review" prompt that instructs the AI to act as a collaborative but meticulous QA partner, evaluating content against a multi-point checklist. This is supplemented by a suite of highly-focused "Specialized Check" prompts that allow the user to zero in on specific aspects of quality control, ensuring no detail is overlooked.
+                  The way I made the agent smart was by creating a single, really big "megaprompt." This main prompt contains everything—its personality as a QA specialist, how it remembers things with the JSON log, and all the rules it has to follow.
                 </p>
-                <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 mt-6">
-                  <div className="p-4 text-xs font-mono text-gray-300 whitespace-pre-wrap">
-                    <code>{promptSnippet}</code>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Inside this megaprompt, I also built a library of smaller, specialized prompts. So when I give the agent a command like `/run check Math_Accuracy`, it knows to use the specific sub-prompt for that QA task. This is how it can do different, complex jobs like checking for localization or analyzing hint structures.
+                </p>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Commands I Built for My Workflow</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  The agent is built around a command system that lets me control every step of the QA process, from initial setup to the final report.
+                </p>
+                <div className="text-left text-sm text-gray-300 space-y-6">
+                  {/* Phase 1 */}
+                  <div>
+                    <h4 className="font-bold text-white mb-2">Phase 1: Task Initialization</h4>
+                    <div className="space-y-3 pl-4 border-l-2 border-orange-600/30 font-mono">
+                      <p><strong className="text-white">/start</strong> - Initializes the QA task and asks for all context files.</p>
+                      <p><strong className="text-white">/run html</strong> - Formats the request document into a clean HTML view.</p>
+                      <p><strong className="text-white">/run progression_map</strong> - Organizes the PTs and creates the Master Feedback Log.</p>
+                    </div>
+                  </div>
+
+                  {/* Phase 2 */}
+                  <div>
+                    <h4 className="font-bold text-white mb-2">Phase 2: Automated QA Checks</h4>
+                    <div className="space-y-3 pl-4 border-l-2 border-orange-600/30 font-mono">
+                      <p><strong className="text-white">/run alignment</strong> - Checks if PTs align with the original request document.</p>
+                      <p><strong className="text-white">/run comprehensive</strong> - Runs a full, holistic review against our entire creation handbook.</p>
+                      <p><strong className="text-white">/run skill_check</strong> - Verifies that each PT is testing the correct curriculum skills.</p>
+                      <div>
+                        <p><strong className="text-white">/run check [check_name]</strong> - Runs a specific, targeted check. `[check_name]` can be:</p>
+                        <ul className="list-disc list-inside pl-4 text-xs mt-2 space-y-1">
+                          <li>Hint_Structure</li>
+                          <li>Forbidden_Words</li>
+                          <li>Randomization_Logic</li>
+                          <li>Language_Tone</li>
+                          <li>Localization</li>
+                          <li>Grade_Level</li>
+                          <li>Math_Accuracy</li>
+                          <li>Solution_Paths</li>
+                          <li>Realistic_Randomization</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Phase 3 */}
+                  <div>
+                    <h4 className="font-bold text-white mb-2">Phase 3: Feedback & Reporting</h4>
+                    <div className="space-y-3 pl-4 border-l-2 border-orange-600/30 font-mono">
+                      <p><strong className="text-white">/add_my_feedback [PT_ID]</strong> - Lets me add my own manual notes to the log for a specific PT.</p>
+                      <p><strong className="text-white">/add_general_feedback</strong> - Allows me to add high-level notes for the whole project.</p>
+                      <p><strong className="text-white">/show_feedback_table</strong> - Displays the full feedback log as a clean TSV table.</p>
+                      <p><strong className="text-white">/generate_report</strong> - Takes all the feedback from the log and creates the final, synthesized report for my coworker.</p>
+                      <p><strong className="text-white">/help</strong> - Shows the full list of commands.</p>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
 
               {/* Back to Portfolio */}
               <div className="pt-8 border-t border-gray-700">

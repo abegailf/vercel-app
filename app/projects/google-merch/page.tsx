@@ -33,7 +33,7 @@ export default function GoogleMerchCaseStudy() {
             <span>/</span>
             <span>Google Merch Shop Case Study</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">Google Merch Shop Case Study</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">Driving E-commerce Insights with GA4</h1>
         </div>
       </section>
 
@@ -79,50 +79,36 @@ export default function GoogleMerchCaseStudy() {
           {/* Main Content */}
           <div className="lg:col-span-2">
             <div className="prose prose-lg max-w-none">
+                          <div className="prose prose-lg max-w-none">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">Project Background:</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Goal: Showcasing My GA4 Skills</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  I designed this case study to showcase my Google Analytics 4 (GA4) skills. I used a demo version of
-                  the Google Merch Shop's data, which comes with some limitations in terms of access and features. To
-                  make the project more meaningful, I created hypothetical objectives that a sales and executive team
-                  might have for an e-commerce business like this. This provided a solid framework for my analysis and
-                  helped demonstrate my ability to extract valuable insights from GA4.
+                  I created this case study to really show what I can do with Google Analytics 4 (GA4). I used the demo data from the Google Merch Shop, so it had some limitations on what I could access.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  To make the project more realistic, I imagined what a real sales or executive team would want to know. I created my own "hypothetical objectives" to give my analysis a clear purpose. This way, I could show how I can find valuable insights from GA4 data that can help a real e-commerce business.
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">Objectives for the Sales Team:</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li>Identify the top-selling products that generate the highest revenue in the past 28 days.</li>
-                  <li>Analyze the purchase funnel to detect bottlenecks or drop-off points.</li>
-                </ul>
-              </div>
-
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">Objectives for the Executive Team:</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li>
-                    Analyze key performance indicators (KPIs) such as website traffic, conversion rates, and revenue
-                    over the last 12 months.
-                  </li>
-                  <li>
-                    Identify trends and patterns in website traffic and sales data to support business strategy.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-600">Key Areas of Analysis:</h3>
-                <ul className="list-disc list-inside space-y-3 text-gray-300 ml-4">
-                  <li><strong className="text-white">Top Sellers:</strong> Which products are bringing in the most revenue?</li>
-                  <li><strong className="text-white">Purchase Funnel:</strong> Where are users dropping off before completing their orders?</li>
-                  <li><strong className="text-white">Year-over-Year Trends:</strong> How is the shop performing compared to last year?</li>
-                </ul>
-              </div>
-
-              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">My Analysis: Answering Business Questions</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Based on my GA4 analysis, I also provided data-driven recommendations for the Google Merch team!
+                  I structured my analysis to answer key business questions from two different perspectives:
+                </p>
+                <ul className="list-disc list-inside space-y-3 text-gray-300 ml-4">
+                  <li>
+                    <strong className="text-white">For the Sales Team:</strong> I focused on immediate sales performance, like identifying the top-selling products and analyzing the purchase funnel to see where customers might be dropping off.
+                  </li>
+                  <li>
+                    <strong className="text-white">For the Executive Team:</strong> I looked at the bigger picture, analyzing long-term trends in website traffic, conversion rates, and overall revenue for the last 12 months to support strategic planning.
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">The Outcome: Data-Driven Recommendations</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Based on my findings from the GA4 data, I was able to provide a full report with data-driven recommendations for the Google Merch team. You can download the full PDF to see the charts and my conclusions.
                 </p>
                 <Button
                   variant="outline"
@@ -130,9 +116,10 @@ export default function GoogleMerchCaseStudy() {
                   onClick={handleDownloadPDF}
                 >
                   <Download className="w-4 h-4 mr-2" />
-                  Download Report
+                  Download Full Report
                 </Button>
               </div>
+            </div>
 
               {/* Project Image */}
               <div className="mb-8">
