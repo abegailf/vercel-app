@@ -133,11 +133,11 @@ const allProjects = [
       categories: ["excel", "processauto"],
       link: "/projects/inventory-replenishment", 
     },
-           {
+            {
       id: 8, 
       title: "Store Pullout Automation (VBA)",
       description: "Excel, VBA, Process Automation",
-      image: "/images/inventory-replenishment.png", 
+      image: "/images/store pullout vba.png", 
       categories: ["excel", "vba", "processauto"],
       link: "/projects/store-pullout-automation", 
     },

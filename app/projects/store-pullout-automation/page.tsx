@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, ExternalLink, Code } from "lucide-react"
+import { ArrowLeft, ExternalLink, Code, Github } from "lucide-react"
 
 export default function StorePulloutAutomation() {
   const vbaCode = `Sub StorePullout()
@@ -127,6 +127,20 @@ End Sub`;
                       This script was developed on a MacBook and is optimized for Excel for Mac.
                     </p>
                   </div>
+
+                       <div>
+                      <strong style={{ color: "#FB5530" }}>Project Link:</strong>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="mt-2 bg-transparent"
+                        style={{ borderColor: "#FB5530", color: "#FB5530" }}
+                        onClick={() => window.open("https://github.com/abegailf/Store-inventory-pullout-automation-VBA", "_blank")}
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </Button>
+                    </div>
                 </div>
               </CardContent>
             </Card>
