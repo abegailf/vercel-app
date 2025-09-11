@@ -75,6 +75,63 @@ End Sub`;
                 </p>
               </div>
 
+                            {/* ================================================================== */}
+              {/* START: LIVE DEMO VIDEO SECTION */}
+              {/* ================================================================== */}
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-orange-600">Live Demo in Action</h3>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Here is a short video showing the VBA script in action. You can see how it transforms the slow, manual task into an instant, automated report.
+                </p>
+                {/* Canva Embed Starts Here */}
+                <div style={{
+                  position: 'relative',
+                  width: '100%',
+                  height: 0,
+                  paddingTop: '56.2500%',
+                  paddingBottom: 0,
+                  boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)',
+                  marginTop: '1.6em',
+                  marginBottom: '0.9em',
+                  overflow: 'hidden',
+                  borderRadius: '8px',
+                  willChange: 'transform'
+                }}>
+                  <iframe
+                    loading="lazy"
+                    style={{
+                      position: 'absolute',
+                      width: '100%',
+                      height: '100%',
+                      top: 0,
+                      left: 0,
+                      border: 'none',
+                      padding: 0,
+                      margin: 0
+                    }}
+                    src="https://www.canva.com/design/DAGys64Bgo4/y7hO7GxLiTtKHzPH310yrQ/watch?embed"
+                    allowFullScreen={true}
+                    allow="fullscreen"
+                  >
+                  </iframe>
+                </div>
+                {/* The link below the video is optional, but good for attribution */}
+                <p className="text-xs text-gray-500 mt-2 text-center">
+                  <a 
+                    href="https://www.canva.com/design/DAGys64Bgo4/y7hO7GxLiTtKHzPH310yrQ/watch?utm_content=DAGys64Bgo4&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-orange-600 transition-colors"
+                  >
+                    Store pullout VBA demo
+                  </a> 
+                  {" "}by Abegail Fontanilla
+                </p>
+              </div>
+              {/* ================================================================== */}
+              {/* END: LIVE DEMO VIDEO SECTION */}
+              {/* ================================================================== */}
+
               <div className="mb-8">
                 <h3 className="text-2xl font-bold mb-4 text-orange-600">The VBA Script</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">

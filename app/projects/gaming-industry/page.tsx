@@ -26,14 +26,10 @@ export default function GamingIndustryCaseStudy() {
     setIsMenuOpen(false)
   }
 
-  const handleDownloadPDF = () => {
-    try {
-      const doc = generateGamingIndustryPDF()
-      doc.save("Video-Games-Sales-Analysis.pdf")
-    } catch (error) {
-      console.error("Error generating PDF:", error)
-      alert("Error generating PDF. Please try again.")
-    }
+const handleDownloadPDF = () => {
+    // For now, let's link directly to a PDF file in your /public folder.
+    // Replace 'your-pdf-filename.pdf' with the actual name of your file.
+    window.open('/files/VIDEO GAMES SALES ANALYSIS.pdf', '_blank');
   }
 
   return (

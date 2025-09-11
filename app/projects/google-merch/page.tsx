@@ -14,7 +14,7 @@ export default function GoogleMerchCaseStudy() {
   const handleDownloadPDF = () => {
     // For now, let's link directly to a PDF file in your /public folder.
     // Replace 'your-pdf-filename.pdf' with the actual name of your file.
-    window.open('/pdfs/Google-Merch-Shop-Case-Study.pdf', '_blank');
+    window.open('/files/Google merch shop case study.pdf', '_blank');
   }
 
   return (

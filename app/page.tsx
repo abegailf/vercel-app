@@ -476,7 +476,7 @@ export default function PortfolioPage() {
               <a href="mailto:abbeyfontanilla@gmail.com" className="text-xl font-bold text-orange-600 hover:text-orange-500 transition-colors">abbeyfontanilla@gmail.com</a>
               <div className="flex items-center gap-6 mt-8">
                   <a href="https://www.linkedin.com/in/abegailrf/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-gray-400 hover:text-orange-600 hover:scale-110 transition-all"><Linkedin className="w-8 h-8" /></a>
-                  <a href="https://github.com/theabbeyf" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-gray-400 hover:text-orange-600 hover:scale-110 transition-all"><Github className="w-8 h-8" /></a>
+                  <a href="https://github.com/abegailf" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-gray-400 hover:text-orange-600 hover:scale-110 transition-all"><Github className="w-8 h-8" /></a>
                   <a href="https://public.tableau.com/app/profile/abegailf/vizzes" target="_blank" rel="noopener noreferrer" aria-label="Tableau Public Profile" className="text-gray-400 hover:text-orange-600 hover:scale-110 transition-all"><TableauIcon className="w-8 h-8" /></a>
               </div>
           </div>
