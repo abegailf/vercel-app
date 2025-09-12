@@ -171,7 +171,7 @@ You will operate based on a strict command system.
                       size="sm"
                       className="mt-2 w-full bg-transparent flex items-center justify-center"
                       style={{ borderColor: "#FB5530", color: "#FB5530" }}
-                      onClick={() => window.open("https://github.com/abegailf/CLI-QA-PTs-for-WS-PT-alignment-task", "_blank")}
+                      onClick={() => window.open("https://github.com/abegailf/Worksheet-PT-Alignment-QA-Specialist-Agent-CLI", "_blank")}
                     >
                       <Github className="w-4 h-4 mr-2" />
                       View Prompt on GitHub

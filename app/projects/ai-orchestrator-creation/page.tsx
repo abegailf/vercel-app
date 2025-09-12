@@ -167,7 +167,7 @@ You will operate based on a strict command system. I will give you a command, an
                       size="sm"
                       className="mt-2 w-full bg-transparent flex items-center justify-center" // Use w-full to make the button take the full width
                       style={{ borderColor: "#FB5530", color: "#FB5530" }}
-                      onClick={() => window.open("https://github.com/abegailf/CLI-PT-creation-workflow-PT-request-task", "_blank")}
+                      onClick={() => window.open("https://github.com/abegailf/PT-Creation-Agent-CLI", "_blank")}
                     >
                       <Github className="w-4 h-4 mr-2" />
                       View Prompt on GitHub

@@ -56,7 +56,7 @@ if __name__ == "__main__":
             <span>/</span>
             <span>AI-Powered Answer Checker (R&D)</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">Automated Worksheet-Answer Checkerr (R&D)</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">Automated Worksheet-Answer Checker (R&D)</h1>
         </div>
       </section>
 
@@ -154,7 +154,7 @@ if __name__ == "__main__":
                       size="sm"
                       className="mt-2 w-full bg-transparent"
                       style={{ borderColor: "#FB5530", color: "#FB5530" }}
-                      onClick={() => window.open("https://github.com/abegailf/WS-AK-checking-practice", "_blank")}
+                      onClick={() => window.open("https://github.com/abegailf/Automated-Worksheet-Answer-Checker", "_blank")}
                     >
                       <Github className="w-4 h-4 mr-2" />
                       View Code on GitHub

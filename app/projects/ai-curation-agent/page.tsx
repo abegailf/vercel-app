@@ -130,7 +130,7 @@ You will operate based on a strict command system.
                       size="sm"
                       className="mt-2 w-full bg-transparent"
                       style={{ borderColor: "#FB5530", color: "#FB5530" }}
-                      onClick={() => window.open("https://github.com/abegailf/WS-AK-checking-practice", "_blank")}
+                      onClick={() => window.open("https://github.com/abegailf/PT-Curation-Agent-CLI", "_blank")}
                     >
                       <Github className="w-4 h-4 mr-2" />
                       View Code on GitHub
