@@ -8,6 +8,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Calendar, ChevronLeft, ChevronRight, Linkedin, Github } from "lucide-react"
+import { Analytics } from "@vercel/analytics/next"
 
 // --- DATA ARRAYS (MOVED TO TOP) ---
 const techTools = [
@@ -24,8 +25,24 @@ const techTools = [
 ];
 
 const certifications = [
-  { title: "Google Data Analytics", issuer: "Google", date: "2022", icon: "G", iconBg: "bg-yellow-500", description: "An entry-level professional certificate teaching practical skills in data cleaning, analysis, and visualization using tools like spreadsheets, SQL, R, and Tableau." },
-  { title: "Google Analytics (GA4)", issuer: "Google", date: "2023", icon: "GA", iconBg: "bg-blue-500", description: "An official certification validating expertise in using Google Analytics 4 (GA4) to measure and analyze website and app performance, including event tracking and reporting." },
+  { 
+    title: "Google Data Analytics", 
+    issuer: "Google", 
+    date: "2024", 
+    icon: "G", 
+    iconBg: "bg-yellow-500", 
+    description: "An entry-level professional certificate teaching practical skills in data cleaning, analysis, and visualization using tools like spreadsheets, SQL, R, and Tableau.",
+    link: "https://www.coursera.org/account/accomplishments/professional-cert/9USFYYKCDT9J" 
+  },
+  { 
+    title: "Google Analytics (GA4)", 
+    issuer: "Google", 
+    date: "2024", 
+    icon: "GA", 
+    iconBg: "bg-blue-500", 
+    description: "An official certification validating expertise in using Google Analytics 4 (GA4) to measure and analyze website and app performance, including event tracking and reporting.",
+    link: "https://skillshop.credential.net/c56dccf2-104f-46de-8e89-00febb6a2b4b" 
+  },
 ];
 
   const workExperience = [
@@ -450,12 +467,35 @@ export default function PortfolioPage() {
                       {certifications.map((cert, index) => (
                           <div key={index} className="flex-shrink-0 w-full px-4">
                               <Card className="border border-[#A59385] hover:border-[#FB5530] transition-all duration-300" style={{ backgroundColor: "#14132B" }}>
-                                  <CardContent className="p-8 text-center">
-                                      <div className={`w-20 h-20 mx-auto mb-6 ${cert.iconBg} rounded-lg flex items-center justify-center shadow-lg`}><span className="text-2xl font-bold text-white">{cert.icon}</span></div>
-                                      <h3 className="font-bold mb-2 text-white text-xl">{cert.title}</h3>
-                                      <p className="text-[#A59385] mb-2 font-medium">{cert.issuer} • {cert.date}</p>
-                                      <p className="text-sm text-[#A59385] leading-relaxed">{cert.description}</p>
-                                  </CardContent>
+                                                       <CardContent className="p-8 text-center flex flex-col h-full">
+                        <div
+                          className={`w-20 h-20 mx-auto mb-6 ${cert.iconBg} rounded-lg flex items-center justify-center shadow-lg`}
+                        >
+                          <span className="text-2xl font-bold text-white">{cert.icon}</span>
+                        </div>
+                        <h3 className="font-bold mb-2 text-white text-xl">{cert.title}</h3>
+                        <p className="text-[#A59385] mb-2 font-medium">
+                          {cert.issuer} • {cert.date}
+                        </p>
+                        <p className="text-sm text-[#A59385] leading-relaxed flex-grow">{cert.description}</p>
+                        
+                        {/* ================================================================== */}
+                        {/* START: NEW VIEW CREDENTIAL BUTTON */}
+                        {/* ================================================================== */}
+                        <div className="mt-6">
+                            <Link href={cert.link} target="_blank" rel="noopener noreferrer">
+                                <Button
+                                    variant="outline"
+                                    className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white bg-transparent"
+                                >
+                                    View Credential
+                                </Button>
+                            </Link>
+                        </div>
+                        {/* ================================================================== */}
+                        {/* END: NEW VIEW CREDENTIAL BUTTON */}
+                        {/* ================================================================== */}
+                      </CardContent>
                               </Card>
                           </div>
                       ))}
