@@ -8,7 +8,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Calendar, ChevronLeft, ChevronRight, Linkedin, Github } from "lucide-react"
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 // --- DATA ARRAYS (MOVED TO TOP) ---
 const techTools = [
